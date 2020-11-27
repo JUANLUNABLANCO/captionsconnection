@@ -1,0 +1,266 @@
+{
+    "AR": {
+      "name": "Argentina",
+      "native": "Argentina",
+      "phone": "54",
+      "continent": "SA",
+      "capital": "Buenos Aires",
+      "currency": "ARS",
+      "languages": [
+        "es",
+        "gn"
+      ]
+    },
+    "BO": {
+      "name": "Bolivia",
+      "native": "Bolivia",
+      "phone": "591",
+      "continent": "SA",
+      "capital": "Sucre",
+      "currency": "BOB,BOV",
+      "languages": [
+        "es",
+        "ay",
+        "qu"
+      ]
+    },
+    "BZ": {
+      "name": "Belize",
+      "native": "Belize",
+      "phone": "501",
+      "continent": "NA",
+      "capital": "Belmopan",
+      "currency": "BZD",
+      "languages": [
+        "en",
+        "es"
+      ]
+    },
+    "CL": {
+      "name": "Chile",
+      "native": "Chile",
+      "phone": "56",
+      "continent": "SA",
+      "capital": "Santiago",
+      "currency": "CLF,CLP",
+      "languages": [
+        "es"
+      ]
+    },
+    "CO": {
+      "name": "Colombia",
+      "native": "Colombia",
+      "phone": "57",
+      "continent": "SA",
+      "capital": "Bogotá",
+      "currency": "COP",
+      "languages": [
+        "es"
+      ]
+    },
+    "CR": {
+      "name": "Costa Rica",
+      "native": "Costa Rica",
+      "phone": "506",
+      "continent": "NA",
+      "capital": "San José",
+      "currency": "CRC",
+      "languages": [
+        "es"
+      ]
+    },
+    "CU": {
+      "name": "Cuba",
+      "native": "Cuba",
+      "phone": "53",
+      "continent": "NA",
+      "capital": "Havana",
+      "currency": "CUC,CUP",
+      "languages": [
+        "es"
+      ]
+    },
+    "DO": {
+      "name": "Dominican Republic",
+      "native": "República Dominicana",
+      "phone": "1809,1829,1849",
+      "continent": "NA",
+      "capital": "Santo Domingo",
+      "currency": "DOP",
+      "languages": [
+        "es"
+      ]
+    },
+    "EC": {
+      "name": "Ecuador",
+      "native": "Ecuador",
+      "phone": "593",
+      "continent": "SA",
+      "capital": "Quito",
+      "currency": "USD",
+      "languages": [
+        "es"
+      ]
+    },
+    "EH": {
+      "name": "Western Sahara",
+      "native": "الصحراء الغربية",
+      "phone": "212",
+      "continent": "AF",
+      "capital": "El Aaiún",
+      "currency": "MAD,DZD,MRU",
+      "languages": [
+        "es"
+      ]
+    },
+    "ES": {
+      "name": "Spain",
+      "native": "España",
+      "phone": "34",
+      "continent": "EU",
+      "capital": "Madrid",
+      "currency": "EUR",
+      "languages": [
+        "es",
+        "eu",
+        "ca",
+        "gl",
+        "oc"
+      ]
+    },
+    "GQ": {
+      "name": "Equatorial Guinea",
+      "native": "Guinea Ecuatorial",
+      "phone": "240",
+      "continent": "AF",
+      "capital": "Malabo",
+      "currency": "XAF",
+      "languages": [
+        "es",
+        "fr"
+      ]
+    },
+    "GT": {
+      "name": "Guatemala",
+      "native": "Guatemala",
+      "phone": "502",
+      "continent": "NA",
+      "capital": "Guatemala City",
+      "currency": "GTQ",
+      "languages": [
+        "es"
+      ]
+    },
+    "HN": {
+      "name": "Honduras",
+      "native": "Honduras",
+      "phone": "504",
+      "continent": "NA",
+      "capital": "Tegucigalpa",
+      "currency": "HNL",
+      "languages": [
+        "es"
+      ]
+    },
+    "MX": {
+      "name": "Mexico",
+      "native": "México",
+      "phone": "52",
+      "continent": "NA",
+      "capital": "Mexico City",
+      "currency": "MXN",
+      "languages": [
+        "es"
+      ]
+    },
+    "NI": {
+      "name": "Nicaragua",
+      "native": "Nicaragua",
+      "phone": "505",
+      "continent": "NA",
+      "capital": "Managua",
+      "currency": "NIO",
+      "languages": [
+        "es"
+      ]
+    },
+    "PA": {
+      "name": "Panama",
+      "native": "Panamá",
+      "phone": "507",
+      "continent": "NA",
+      "capital": "Panama City",
+      "currency": "PAB,USD",
+      "languages": [
+        "es"
+      ]
+    },
+    "PE": {
+      "name": "Peru",
+      "native": "Perú",
+      "phone": "51",
+      "continent": "SA",
+      "capital": "Lima",
+      "currency": "PEN",
+      "languages": [
+        "es"
+      ]
+    },
+    "PR": {
+      "name": "Puerto Rico",
+      "native": "Puerto Rico",
+      "phone": "1787,1939",
+      "continent": "NA",
+      "capital": "San Juan",
+      "currency": "USD",
+      "languages": [
+        "es",
+        "en"
+      ]
+    },
+    "PY": {
+      "name": "Paraguay",
+      "native": "Paraguay",
+      "phone": "595",
+      "continent": "SA",
+      "capital": "Asunción",
+      "currency": "PYG",
+      "languages": [
+        "es",
+        "gn"
+      ]
+    },
+    "SV": {
+      "name": "El Salvador",
+      "native": "El Salvador",
+      "phone": "503",
+      "continent": "NA",
+      "capital": "San Salvador",
+      "currency": "SVC,USD",
+      "languages": [
+        "es"
+      ]
+    },
+    "UY": {
+      "name": "Uruguay",
+      "native": "Uruguay",
+      "phone": "598",
+      "continent": "SA",
+      "capital": "Montevideo",
+      "currency": "UYI,UYU",
+      "languages": [
+        "es"
+      ]
+    },
+    "VE": {
+      "name": "Venezuela",
+      "native": "Venezuela",
+      "phone": "58",
+      "continent": "SA",
+      "capital": "Caracas",
+      "currency": "VES",
+      "languages": [
+        "es"
+      ]
+    }
+  }

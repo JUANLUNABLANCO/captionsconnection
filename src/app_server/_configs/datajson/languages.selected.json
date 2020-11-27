@@ -1,0 +1,56 @@
+{   
+    
+    "AR": {
+        "name": "Arabic",
+        "native": "العربية",
+        "rtl": 1
+    },
+    "DE": {
+        "name": "German",
+        "native": "Deutsch"
+    },
+    "EN": {
+        "name": "English",
+        "native": "English"
+    },
+    "ES": {
+        "name": "Spanish",
+        "native": "Español"
+    },
+    "FR": {
+        "name": "French",
+        "native": "Français"
+    },
+    "HI": {
+        "name": "Hindi",
+        "native": "हिन्दी"
+    },
+    "IT": {
+        "name": "Italian",
+        "native": "Italiano"
+    },
+    "NL": {
+        "name": "Dutch",
+        "native": "Nederlands"
+    },
+    "NO": {
+      "name": "Norwegian",
+      "native": "Norsk"
+    },    
+    "PT": {
+        "name": "Portuguese",
+        "native": "Português"
+    },
+    "RU": {
+        "name": "Russian",
+        "native": "Русский"
+    },  
+    "SV": {
+        "name": "Swedish",
+        "native": "Svenska"
+    },
+    "ZH": {
+        "name": "Chinese",
+        "native": "中文"
+    }
+}

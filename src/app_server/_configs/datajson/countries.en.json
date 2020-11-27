@@ -1,0 +1,1075 @@
+{
+    "AG": {
+      "name": "Antigua and Barbuda",
+      "native": "Antigua and Barbuda",
+      "phone": "1268",
+      "continent": "NA",
+      "capital": "Saint John's",
+      "currency": "XCD",
+      "languages": [
+        "en"
+      ]
+    },
+    "AI": {
+      "name": "Anguilla",
+      "native": "Anguilla",
+      "phone": "1264",
+      "continent": "NA",
+      "capital": "The Valley",
+      "currency": "XCD",
+      "languages": [
+        "en"
+      ]
+    },
+    "AS": {
+      "name": "American Samoa",
+      "native": "American Samoa",
+      "phone": "1684",
+      "continent": "OC",
+      "capital": "Pago Pago",
+      "currency": "USD",
+      "languages": [
+        "en",
+        "sm"
+      ]
+    },
+    "AU": {
+      "name": "Australia",
+      "native": "Australia",
+      "phone": "61",
+      "continent": "OC",
+      "capital": "Canberra",
+      "currency": "AUD",
+      "languages": [
+        "en"
+      ]
+    },
+    "BB": {
+      "name": "Barbados",
+      "native": "Barbados",
+      "phone": "1246",
+      "continent": "NA",
+      "capital": "Bridgetown",
+      "currency": "BBD",
+      "languages": [
+        "en"
+      ]
+    },
+    "BF": {
+      "name": "Burkina Faso",
+      "native": "Burkina Faso",
+      "phone": "226",
+      "continent": "AF",
+      "capital": "Ouagadougou",
+      "currency": "XOF",
+      "languages": [
+        "fr",
+        "ff"
+      ]
+    },
+    "BM": {
+      "name": "Bermuda",
+      "native": "Bermuda",
+      "phone": "1441",
+      "continent": "NA",
+      "capital": "Hamilton",
+      "currency": "BMD",
+      "languages": [
+        "en"
+      ]
+    },
+    "BS": {
+      "name": "Bahamas",
+      "native": "Bahamas",
+      "phone": "1242",
+      "continent": "NA",
+      "capital": "Nassau",
+      "currency": "BSD",
+      "languages": [
+        "en"
+      ]
+    },
+    "BW": {
+      "name": "Botswana",
+      "native": "Botswana",
+      "phone": "267",
+      "continent": "AF",
+      "capital": "Gaborone",
+      "currency": "BWP",
+      "languages": [
+        "en",
+        "tn"
+      ]
+    },
+    "BZ": {
+      "name": "Belize",
+      "native": "Belize",
+      "phone": "501",
+      "continent": "NA",
+      "capital": "Belmopan",
+      "currency": "BZD",
+      "languages": [
+        "en",
+        "es"
+      ]
+    },
+    "CA": {
+      "name": "Canada",
+      "native": "Canada",
+      "phone": "1",
+      "continent": "NA",
+      "capital": "Ottawa",
+      "currency": "CAD",
+      "languages": [
+        "en",
+        "fr"
+      ]
+    },
+    "CC": {
+      "name": "Cocos [Keeling] Islands",
+      "native": "Cocos (Keeling) Islands",
+      "phone": "61",
+      "continent": "AS",
+      "capital": "West Island",
+      "currency": "AUD",
+      "languages": [
+        "en"
+      ]
+    },
+    "CK": {
+      "name": "Cook Islands",
+      "native": "Cook Islands",
+      "phone": "682",
+      "continent": "OC",
+      "capital": "Avarua",
+      "currency": "NZD",
+      "languages": [
+        "en"
+      ]
+    },
+    "CM": {
+      "name": "Cameroon",
+      "native": "Cameroon",
+      "phone": "237",
+      "continent": "AF",
+      "capital": "Yaoundé",
+      "currency": "XAF",
+      "languages": [
+        "en",
+        "fr"
+      ]
+    },    
+    "CW": {
+      "name": "Curacao",
+      "native": "Curaçao",
+      "phone": "5999",
+      "continent": "NA",
+      "capital": "Willemstad",
+      "currency": "ANG",
+      "languages": [
+        "nl",
+        "pa",
+        "en"
+      ]
+    },
+    "CX": {
+      "name": "Christmas Island",
+      "native": "Christmas Island",
+      "phone": "61",
+      "continent": "AS",
+      "capital": "Flying Fish Cove",
+      "currency": "AUD",
+      "languages": [
+        "en"
+      ]
+    },
+    "CZ": {
+      "name": "Czech Republic",
+      "native": "Česká republika",
+      "phone": "420",
+      "continent": "EU",
+      "capital": "Prague",
+      "currency": "CZK",
+      "languages": [
+        "cs",
+        "sk"
+      ]
+    },
+    "DM": {
+      "name": "Dominica",
+      "native": "Dominica",
+      "phone": "1767",
+      "continent": "NA",
+      "capital": "Roseau",
+      "currency": "XCD",
+      "languages": [
+        "en"
+      ]
+    },
+    "ER": {
+      "name": "Eritrea",
+      "native": "ኤርትራ",
+      "phone": "291",
+      "continent": "AF",
+      "capital": "Asmara",
+      "currency": "ERN",
+      "languages": [
+        "ti",
+        "ar",
+        "en"
+      ]
+    },
+    "FJ": {
+      "name": "Fiji",
+      "native": "Fiji",
+      "phone": "679",
+      "continent": "OC",
+      "capital": "Suva",
+      "currency": "FJD",
+      "languages": [
+        "en",
+        "fj",
+        "hi",
+        "ur"
+      ]
+    },
+    "FK": {
+      "name": "Falkland Islands",
+      "native": "Falkland Islands",
+      "phone": "500",
+      "continent": "SA",
+      "capital": "Stanley",
+      "currency": "FKP",
+      "languages": [
+        "en"
+      ]
+    },
+    "FM": {
+      "name": "Micronesia",
+      "native": "Micronesia",
+      "phone": "691",
+      "continent": "OC",
+      "capital": "Palikir",
+      "currency": "USD",
+      "languages": [
+        "en"
+      ]
+    },
+    "GB": {
+      "name": "United Kingdom",
+      "native": "United Kingdom",
+      "phone": "44",
+      "continent": "EU",
+      "capital": "London",
+      "currency": "GBP",
+      "languages": [
+        "en"
+      ]
+    },
+    "GD": {
+      "name": "Grenada",
+      "native": "Grenada",
+      "phone": "1473",
+      "continent": "NA",
+      "capital": "St. George's",
+      "currency": "XCD",
+      "languages": [
+        "en"
+      ]
+    },
+    "GG": {
+      "name": "Guernsey",
+      "native": "Guernsey",
+      "phone": "44",
+      "continent": "EU",
+      "capital": "St. Peter Port",
+      "currency": "GBP",
+      "languages": [
+        "en",
+        "fr"
+      ]
+    },
+    "GH": {
+      "name": "Ghana",
+      "native": "Ghana",
+      "phone": "233",
+      "continent": "AF",
+      "capital": "Accra",
+      "currency": "GHS",
+      "languages": [
+        "en"
+      ]
+    },
+    "GI": {
+      "name": "Gibraltar",
+      "native": "Gibraltar",
+      "phone": "350",
+      "continent": "EU",
+      "capital": "Gibraltar",
+      "currency": "GIP",
+      "languages": [
+        "en"
+      ]
+    },
+    "GM": {
+      "name": "Gambia",
+      "native": "Gambia",
+      "phone": "220",
+      "continent": "AF",
+      "capital": "Banjul",
+      "currency": "GMD",
+      "languages": [
+        "en"
+      ]
+    },
+    "GS": {
+      "name": "South Georgia and the South Sandwich Islands",
+      "native": "South Georgia",
+      "phone": "500",
+      "continent": "AN",
+      "capital": "King Edward Point",
+      "currency": "GBP",
+      "languages": [
+        "en"
+      ]
+    },
+    "GU": {
+      "name": "Guam",
+      "native": "Guam",
+      "phone": "1671",
+      "continent": "OC",
+      "capital": "Hagåtña",
+      "currency": "USD",
+      "languages": [
+        "en",
+        "ch",
+        "es"
+      ]
+    },
+    "GY": {
+      "name": "Guyana",
+      "native": "Guyana",
+      "phone": "592",
+      "continent": "SA",
+      "capital": "Georgetown",
+      "currency": "GYD",
+      "languages": [
+        "en"
+      ]
+    },
+    "HK": {
+      "name": "Hong Kong",
+      "native": "香港",
+      "phone": "852",
+      "continent": "AS",
+      "capital": "City of Victoria",
+      "currency": "HKD",
+      "languages": [
+        "zh",
+        "en"
+      ]
+    },
+    "HM": {
+      "name": "Heard Island and McDonald Islands",
+      "native": "Heard Island and McDonald Islands",
+      "phone": "61",
+      "continent": "AN",
+      "capital": "",
+      "currency": "AUD",
+      "languages": [
+        "en"
+      ]
+    },
+    "IE": {
+      "name": "Ireland",
+      "native": "Éire",
+      "phone": "353",
+      "continent": "EU",
+      "capital": "Dublin",
+      "currency": "EUR",
+      "languages": [
+        "ga",
+        "en"
+      ]
+    },
+    "IM": {
+      "name": "Isle of Man",
+      "native": "Isle of Man",
+      "phone": "44",
+      "continent": "EU",
+      "capital": "Douglas",
+      "currency": "GBP",
+      "languages": [
+        "en",
+        "gv"
+      ]
+    },
+    "IN": {
+      "name": "India",
+      "native": "भारत",
+      "phone": "91",
+      "continent": "AS",
+      "capital": "New Delhi",
+      "currency": "INR",
+      "languages": [
+        "hi",
+        "en"
+      ]
+    },
+    "IO": {
+      "name": "British Indian Ocean Territory",
+      "native": "British Indian Ocean Territory",
+      "phone": "246",
+      "continent": "AS",
+      "capital": "Diego Garcia",
+      "currency": "USD",
+      "languages": [
+        "en"
+      ]
+    },
+    "JE": {
+      "name": "Jersey",
+      "native": "Jersey",
+      "phone": "44",
+      "continent": "EU",
+      "capital": "Saint Helier",
+      "currency": "GBP",
+      "languages": [
+        "en",
+        "fr"
+      ]
+    },
+    "JM": {
+      "name": "Jamaica",
+      "native": "Jamaica",
+      "phone": "1876",
+      "continent": "NA",
+      "capital": "Kingston",
+      "currency": "JMD",
+      "languages": [
+        "en"
+      ]
+    },
+    "KE": {
+      "name": "Kenya",
+      "native": "Kenya",
+      "phone": "254",
+      "continent": "AF",
+      "capital": "Nairobi",
+      "currency": "KES",
+      "languages": [
+        "en",
+        "sw"
+      ]
+    },
+    "KI": {
+      "name": "Kiribati",
+      "native": "Kiribati",
+      "phone": "686",
+      "continent": "OC",
+      "capital": "South Tarawa",
+      "currency": "AUD",
+      "languages": [
+        "en"
+      ]
+    },
+    "KN": {
+      "name": "Saint Kitts and Nevis",
+      "native": "Saint Kitts and Nevis",
+      "phone": "1869",
+      "continent": "NA",
+      "capital": "Basseterre",
+      "currency": "XCD",
+      "languages": [
+        "en"
+      ]
+    },
+    "KY": {
+      "name": "Cayman Islands",
+      "native": "Cayman Islands",
+      "phone": "1345",
+      "continent": "NA",
+      "capital": "George Town",
+      "currency": "KYD",
+      "languages": [
+        "en"
+      ]
+    },
+    "LR": {
+      "name": "Liberia",
+      "native": "Liberia",
+      "phone": "231",
+      "continent": "AF",
+      "capital": "Monrovia",
+      "currency": "LRD",
+      "languages": [
+        "en"
+      ]
+    },
+    "LS": {
+      "name": "Lesotho",
+      "native": "Lesotho",
+      "phone": "266",
+      "continent": "AF",
+      "capital": "Maseru",
+      "currency": "LSL,ZAR",
+      "languages": [
+        "en",
+        "st"
+      ]
+    },
+    "MF": {
+      "name": "Saint Martin",
+      "native": "Saint-Martin",
+      "phone": "590",
+      "continent": "NA",
+      "capital": "Marigot",
+      "currency": "EUR",
+      "languages": [
+        "en",
+        "fr",
+        "nl"
+      ]
+    },
+    "MH": {
+      "name": "Marshall Islands",
+      "native": "M̧ajeļ",
+      "phone": "692",
+      "continent": "OC",
+      "capital": "Majuro",
+      "currency": "USD",
+      "languages": [
+        "en",
+        "mh"
+      ]
+    },
+    "MP": {
+      "name": "Northern Mariana Islands",
+      "native": "Northern Mariana Islands",
+      "phone": "1670",
+      "continent": "OC",
+      "capital": "Saipan",
+      "currency": "USD",
+      "languages": [
+        "en",
+        "ch"
+      ]
+    },
+    "MS": {
+      "name": "Montserrat",
+      "native": "Montserrat",
+      "phone": "1664",
+      "continent": "NA",
+      "capital": "Plymouth",
+      "currency": "XCD",
+      "languages": [
+        "en"
+      ]
+    },
+    "MT": {
+      "name": "Malta",
+      "native": "Malta",
+      "phone": "356",
+      "continent": "EU",
+      "capital": "Valletta",
+      "currency": "EUR",
+      "languages": [
+        "mt",
+        "en"
+      ]
+    },
+    "MU": {
+      "name": "Mauritius",
+      "native": "Maurice",
+      "phone": "230",
+      "continent": "AF",
+      "capital": "Port Louis",
+      "currency": "MUR",
+      "languages": [
+        "en"
+      ]
+    },
+    "MW": {
+      "name": "Malawi",
+      "native": "Malawi",
+      "phone": "265",
+      "continent": "AF",
+      "capital": "Lilongwe",
+      "currency": "MWK",
+      "languages": [
+        "en",
+        "ny"
+      ]
+    },
+    "NA": {
+      "name": "Namibia",
+      "native": "Namibia",
+      "phone": "264",
+      "continent": "AF",
+      "capital": "Windhoek",
+      "currency": "NAD,ZAR",
+      "languages": [
+        "en",
+        "af"
+      ]
+    },
+    "NF": {
+      "name": "Norfolk Island",
+      "native": "Norfolk Island",
+      "phone": "672",
+      "continent": "OC",
+      "capital": "Kingston",
+      "currency": "AUD",
+      "languages": [
+        "en"
+      ]
+    },
+    "NG": {
+      "name": "Nigeria",
+      "native": "Nigeria",
+      "phone": "234",
+      "continent": "AF",
+      "capital": "Abuja",
+      "currency": "NGN",
+      "languages": [
+        "en"
+      ]
+    },
+    "NR": {
+      "name": "Nauru",
+      "native": "Nauru",
+      "phone": "674",
+      "continent": "OC",
+      "capital": "Yaren",
+      "currency": "AUD",
+      "languages": [
+        "en",
+        "na"
+      ]
+    },
+    "NU": {
+      "name": "Niue",
+      "native": "Niuē",
+      "phone": "683",
+      "continent": "OC",
+      "capital": "Alofi",
+      "currency": "NZD",
+      "languages": [
+        "en"
+      ]
+    },
+    "NZ": {
+      "name": "New Zealand",
+      "native": "New Zealand",
+      "phone": "64",
+      "continent": "OC",
+      "capital": "Wellington",
+      "currency": "NZD",
+      "languages": [
+        "en",
+        "mi"
+      ]
+    },
+    "PG": {
+      "name": "Papua New Guinea",
+      "native": "Papua Niugini",
+      "phone": "675",
+      "continent": "OC",
+      "capital": "Port Moresby",
+      "currency": "PGK",
+      "languages": [
+        "en"
+      ]
+    },
+    "PH": {
+      "name": "Philippines",
+      "native": "Pilipinas",
+      "phone": "63",
+      "continent": "AS",
+      "capital": "Manila",
+      "currency": "PHP",
+      "languages": [
+        "en"
+      ]
+    },
+    "PK": {
+      "name": "Pakistan",
+      "native": "Pakistan",
+      "phone": "92",
+      "continent": "AS",
+      "capital": "Islamabad",
+      "currency": "PKR",
+      "languages": [
+        "en",
+        "ur"
+      ]
+    },
+    "PN": {
+      "name": "Pitcairn Islands",
+      "native": "Pitcairn Islands",
+      "phone": "64",
+      "continent": "OC",
+      "capital": "Adamstown",
+      "currency": "NZD",
+      "languages": [
+        "en"
+      ]
+    },
+    "PR": {
+      "name": "Puerto Rico",
+      "native": "Puerto Rico",
+      "phone": "1787,1939",
+      "continent": "NA",
+      "capital": "San Juan",
+      "currency": "USD",
+      "languages": [
+        "es",
+        "en"
+      ]
+    },
+    "PW": {
+      "name": "Palau",
+      "native": "Palau",
+      "phone": "680",
+      "continent": "OC",
+      "capital": "Ngerulmud",
+      "currency": "USD",
+      "languages": [
+        "en"
+      ]
+    },
+    "RW": {
+      "name": "Rwanda",
+      "native": "Rwanda",
+      "phone": "250",
+      "continent": "AF",
+      "capital": "Kigali",
+      "currency": "RWF",
+      "languages": [
+        "rw",
+        "en",
+        "fr"
+      ]
+    },
+    "SB": {
+      "name": "Solomon Islands",
+      "native": "Solomon Islands",
+      "phone": "677",
+      "continent": "OC",
+      "capital": "Honiara",
+      "currency": "SBD",
+      "languages": [
+        "en"
+      ]
+    },
+    "SC": {
+      "name": "Seychelles",
+      "native": "Seychelles",
+      "phone": "248",
+      "continent": "AF",
+      "capital": "Victoria",
+      "currency": "SCR",
+      "languages": [
+        "fr",
+        "en"
+      ]
+    },
+    "SD": {
+      "name": "Sudan",
+      "native": "السودان",
+      "phone": "249",
+      "continent": "AF",
+      "capital": "Khartoum",
+      "currency": "SDG",
+      "languages": [
+        "ar",
+        "en"
+      ]
+    },
+    "SG": {
+      "name": "Singapore",
+      "native": "Singapore",
+      "phone": "65",
+      "continent": "AS",
+      "capital": "Singapore",
+      "currency": "SGD",
+      "languages": [
+        "en",
+        "ms",
+        "ta",
+        "zh"
+      ]
+    },
+    "SH": {
+      "name": "Saint Helena",
+      "native": "Saint Helena",
+      "phone": "290",
+      "continent": "AF",
+      "capital": "Jamestown",
+      "currency": "SHP",
+      "languages": [
+        "en"
+      ]
+    },
+    "SL": {
+      "name": "Sierra Leone",
+      "native": "Sierra Leone",
+      "phone": "232",
+      "continent": "AF",
+      "capital": "Freetown",
+      "currency": "SLL",
+      "languages": [
+        "en"
+      ]
+    },
+    "SS": {
+      "name": "South Sudan",
+      "native": "South Sudan",
+      "phone": "211",
+      "continent": "AF",
+      "capital": "Juba",
+      "currency": "SSP",
+      "languages": [
+        "en"
+      ]
+    },
+    "SX": {
+      "name": "Sint Maarten",
+      "native": "Sint Maarten",
+      "phone": "1721",
+      "continent": "NA",
+      "capital": "Philipsburg",
+      "currency": "ANG",
+      "languages": [
+        "nl",
+        "en"
+      ]
+    },
+    "SZ": {
+      "name": "Swaziland",
+      "native": "Swaziland",
+      "phone": "268",
+      "continent": "AF",
+      "capital": "Lobamba",
+      "currency": "SZL",
+      "languages": [
+        "en",
+        "ss"
+      ]
+    },
+    "TC": {
+      "name": "Turks and Caicos Islands",
+      "native": "Turks and Caicos Islands",
+      "phone": "1649",
+      "continent": "NA",
+      "capital": "Cockburn Town",
+      "currency": "USD",
+      "languages": [
+        "en"
+      ]
+    },
+    "TK": {
+      "name": "Tokelau",
+      "native": "Tokelau",
+      "phone": "690",
+      "continent": "OC",
+      "capital": "Fakaofo",
+      "currency": "NZD",
+      "languages": [
+        "en"
+      ]
+    },
+    "TO": {
+      "name": "Tonga",
+      "native": "Tonga",
+      "phone": "676",
+      "continent": "OC",
+      "capital": "Nuku'alofa",
+      "currency": "TOP",
+      "languages": [
+        "en",
+        "to"
+      ]
+    },
+    "TT": {
+      "name": "Trinidad and Tobago",
+      "native": "Trinidad and Tobago",
+      "phone": "1868",
+      "continent": "NA",
+      "capital": "Port of Spain",
+      "currency": "TTD",
+      "languages": [
+        "en"
+      ]
+    },
+    "TV": {
+      "name": "Tuvalu",
+      "native": "Tuvalu",
+      "phone": "688",
+      "continent": "OC",
+      "capital": "Funafuti",
+      "currency": "AUD",
+      "languages": [
+        "en"
+      ]
+    },
+    "TZ": {
+      "name": "Tanzania",
+      "native": "Tanzania",
+      "phone": "255",
+      "continent": "AF",
+      "capital": "Dodoma",
+      "currency": "TZS",
+      "languages": [
+        "sw",
+        "en"
+      ]
+    },
+    "UG": {
+      "name": "Uganda",
+      "native": "Uganda",
+      "phone": "256",
+      "continent": "AF",
+      "capital": "Kampala",
+      "currency": "UGX",
+      "languages": [
+        "en",
+        "sw"
+      ]
+    },
+    "UM": {
+      "name": "U.S. Minor Outlying Islands",
+      "native": "United States Minor Outlying Islands",
+      "phone": "1",
+      "continent": "OC",
+      "capital": "",
+      "currency": "USD",
+      "languages": [
+        "en"
+      ]
+    },
+    "US": {
+      "name": "United States",
+      "native": "United States",
+      "phone": "1",
+      "continent": "NA",
+      "capital": "Washington D.C.",
+      "currency": "USD,USN,USS",
+      "languages": [
+        "en"
+      ]
+    },
+    "VC": {
+      "name": "Saint Vincent and the Grenadines",
+      "native": "Saint Vincent and the Grenadines",
+      "phone": "1784",
+      "continent": "NA",
+      "capital": "Kingstown",
+      "currency": "XCD",
+      "languages": [
+        "en"
+      ]
+    },
+    "VE": {
+      "name": "Venezuela",
+      "native": "Venezuela",
+      "phone": "58",
+      "continent": "SA",
+      "capital": "Caracas",
+      "currency": "VES",
+      "languages": [
+        "es"
+      ]
+    },
+    "VG": {
+      "name": "British Virgin Islands",
+      "native": "British Virgin Islands",
+      "phone": "1284",
+      "continent": "NA",
+      "capital": "Road Town",
+      "currency": "USD",
+      "languages": [
+        "en"
+      ]
+    },
+    "VI": {
+      "name": "U.S. Virgin Islands",
+      "native": "United States Virgin Islands",
+      "phone": "1340",
+      "continent": "NA",
+      "capital": "Charlotte Amalie",
+      "currency": "USD",
+      "languages": [
+        "en"
+      ]
+    },
+    "VU": {
+      "name": "Vanuatu",
+      "native": "Vanuatu",
+      "phone": "678",
+      "continent": "OC",
+      "capital": "Port Vila",
+      "currency": "VUV",
+      "languages": [
+        "bi",
+        "en",
+        "fr"
+      ]
+    },
+    "WS": {
+      "name": "Samoa",
+      "native": "Samoa",
+      "phone": "685",
+      "continent": "OC",
+      "capital": "Apia",
+      "currency": "WST",
+      "languages": [
+        "sm",
+        "en"
+      ]
+    },
+    "ZA": {
+      "name": "South Africa",
+      "native": "South Africa",
+      "phone": "27",
+      "continent": "AF",
+      "capital": "Pretoria",
+      "currency": "ZAR",
+      "languages": [
+        "af",
+        "en",
+        "nr",
+        "st",
+        "ss",
+        "tn",
+        "ts",
+        "ve",
+        "xh",
+        "zu"
+      ]
+    },
+    "ZM": {
+      "name": "Zambia",
+      "native": "Zambia",
+      "phone": "260",
+      "continent": "AF",
+      "capital": "Lusaka",
+      "currency": "ZMW",
+      "languages": [
+        "en"
+      ]
+    },
+    "ZW": {
+      "name": "Zimbabwe",
+      "native": "Zimbabwe",
+      "phone": "263",
+      "continent": "AF",
+      "capital": "Harare",
+      "currency": "USD,ZAR,BWP,GBP,AUD,CNY,INR,JPY",
+      "languages": [
+        "en",
+        "sn",
+        "nd"
+      ]
+    }
+  }
