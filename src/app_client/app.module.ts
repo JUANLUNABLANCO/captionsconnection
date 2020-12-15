@@ -1,6 +1,11 @@
+// ########## ng
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
+// ########## ngx-bootstrap
+// import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 // modules
 import { PagesModule } from './pages/pages.module';
@@ -11,6 +16,7 @@ import { APP_ROUTING } from './app-routing';
 // COMPONENTS
 import { AppComponent } from './app.component';
 
+
 // MY COMPONENTS
 
 
@@ -20,7 +26,20 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    // ########## ng10
+    // BrowserModule,
+    // CommonModule,
+    // BrowserAnimationsModule,
+    // ... todo en PagesModule
+
+    // ########## ngx-bootstrap
+    // ButtonsModule.forRoot(),
+    CollapseModule.forRoot(),
+    ModalModule.forRoot(),
+    AlertModule.forRoot(),
+    TooltipModule.forRoot(),
+    
+    // ########## app-business
     APP_ROUTING,
     PagesModule
   ],

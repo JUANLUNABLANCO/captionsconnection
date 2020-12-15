@@ -7,14 +7,14 @@ const morgan    = require('morgan');                                //  console 
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 /* ##########  HELPERS          ################################# */
-const myPrint           = require('./app_server/_helpers/hlpPrintConsole');      // console print dev
+const myPrint   = require('./app_server/_helpers/hlpPrintConsole');      // console print dev
 // const myResponseManager = require('./app_server/helpers/hlpResponseManager');   // para manejo de envíos res.json()...
 /* ##########  HELPERS          ################################# */
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 /* ##########  CONFIGURACION DE EXPRESS      #################### */
 /* ####### CONFIGURATION  ####### */
-const CONFIG = require('./app_server/_configs/general'); 
+const CONFIG    = require('./app_server/_configs/general'); 
 /* ####### CONFIGURATION  ####### */
 /* ####### GLOBALS        ####### */
 global._ENV                 = process.env.NODE_ENV || 'development';
@@ -37,15 +37,18 @@ app.use(morgan('dev'));                             // colores console
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 /* ##########  RUTAS            ################################# */
-const channelRoutes = require("./app_server/Channel/channel.routes");
-const freelancerRoutes = require("./app_server/Freelancer/freelancer.routes");
-
+const channelRoutes     = require("./app_server/Channel/channel.routes");
+const freelancerRoutes  = require("./app_server/Freelancer/freelancer.routes");
+const clientRoutes      = require("./app_server/Client/client.routes");
+const userRoutes        = require("./app_server/User/user.routes");
 // @@@@@ raíz
 const homeRoutes    = require("./app_server/routes/main/home.routes");
 // @@@@@@@@@@@@@@@@@ CHANNEL
 // http://localhost:3333/api/channel
-app.use('/api/channel', channelRoutes);
-app.use('/api/freelancer', freelancerRoutes);
+app.use('/api/channel',     channelRoutes);
+app.use('/api/freelancer',  freelancerRoutes);
+app.use('/api/client',      clientRoutes);
+app.use('/api/user',        userRoutes);
 // @@@@@@@@@@@@@@@@@ /, /home, /api, /api/home, /etc
 // http://localhost.3333/api/
 app.use('/api', homeRoutes);            
@@ -72,7 +75,7 @@ else {
       console.log("*********************************************************************");
       console.log('Express server listening in http://localhost:' + Server.address().port ); // _PORT
       console.log("---------------------------------------------------------------------");
-      _PRINT.Console("PrintConsole","Print Console in " + _ENV);
+      _PRINT.Console("PrintConsole","Print Console", _ENV);
       console.log("---------------------------------------------------------------------");
     });
   }

@@ -1,0 +1,732 @@
+// pelette
+@import '../../../config-vars'
+
+// ########### reset 
+.main-lpchannel
+  :host
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    font-size: .7rem
+    color: #333
+    box-sizing: border-box
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+ 
+  h1, h2, h3, h4, h5, h6
+    margin: 8px 0 !important
+    padding: 16px !important
+
+  p
+    margin: 0
+
+// ########### jumbotron
+.saludo
+  margin: 50px 0
+
+// ########### main-lpchannel
+.text-hightlight
+  color: #c96ff0
+  font-weight: 700
+
+.oro path
+  fill: #E8B20F
+
+.content
+  margin: 82px auto 32px
+  padding: 0 16px
+  max-width: 1200px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.cc-icons
+  height: 60px
+  width: auto
+
+.material-icons
+  height: 30px
+  width: auto
+
+  &:not(:last-child)
+    margin-right: 8px
+
+.ccard svg.material-icons
+  margin-right: 10px
+
+.caption-message
+  margin: 2rem 1rem
+  p 
+    margin: 1.5rem 0.5rem
+
+.ccard-container
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin-top: 8px
+
+.ccard
+  flex-grow: 1
+  border-radius: 4px
+  border: 3px solid #eee//#eee
+  background-color: #fafafa
+  height: 40px
+  width: 200px
+  margin: 0 8px 8px
+  padding: 8px
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  transition: all 0.2s ease-in-out
+  line-height: 24px
+
+.ccard.ccard-orange
+  background-color: #f1870e// #45ADE4
+  color: #fff
+  padding: 0px !important
+  width: 340px
+  height: 80px
+  border-radius: 12px
+
+  svg
+    path
+      fill: white
+
+.ccard-container .ccard:not(:last-child)
+  margin-right: 0
+
+.ccard.ccard-small
+  height: 100%
+  width: 200px
+
+.ccard-container .ccard:not(.highlight-ccard)
+  cursor: pointer
+
+  &:hover
+    transform: translateY(-3px)
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35)
+
+    // svg.material-icons path 
+    //   fill: rgb(105, 103, 103)
+    // 
+
+.ccard.highlight-ccard
+  background-color: #1976d2
+  color: white
+  font-weight: 600
+  border: none
+  width: auto
+  min-width: 30%
+  margin: 85px 0 0 0
+  position: relative
+
+  span
+    margin-left: 70px
+
+svg
+  &#rocket
+    width: 250px
+    position: absolute
+    left: -170px
+    top: -180px
+    // border: 1px solid red
+
+  &#rocket-smoke
+    height: calc(100vh - 95px)
+    position: absolute
+    top: 10px
+    right: 180px
+    z-index: -10
+    path
+      fill: #ECF7FC
+
+a
+  color: #1976d2
+  text-decoration: none
+
+  &:visited
+    color: #1976d2
+    text-decoration: none
+
+  &:hover
+    color: #1976d2
+    text-decoration: none
+    color: #125699
+
+.terminal
+  position: relative
+  width: 80%
+  height: 240px
+  max-width: 600px
+  border-radius: 6px
+  padding-top: 45px
+  margin-top: 8px
+  overflow: hidden
+  background-color: rgb(15, 15, 16)
+
+  &::before
+    content: ""// \2022 // 🕪⏵
+    text-align: left
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 30px
+    background: rgb(58, 58, 58)
+    color: #c2c3c4
+    width: 100%
+    font-size: 2rem
+    line-height: 0
+    padding: 28px 10px 0px 50px
+    text-indent: 4px
+
+  .pre
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace
+    background-color: #888
+    color: white
+    display: inline-block
+    text-align: center
+    padding: 0 2.3rem 0 2.3rem
+    margin: 0 !important
+    position: absolute
+    bottom: 30px
+    border: 1px solid #888
+
+.circle-link
+  height: 40px
+  width: 40px
+  border-radius: 40px
+  margin: 8px
+  background-color: white
+  border: 1px solid #eeeeee
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+  transition: 1s ease-out
+
+  &:hover
+    transform: translateY(-0.25rem)
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2)
+
+div.terminal-footer
+  margin-top: 8px
+  margin-bottom: 10em
+  display: flex
+  align-items: center
+  line-height: 20px
+
+  a
+    display: flex
+    align-items: center
+  
+  h5
+    color: $blue-600
+
+
+.github-star-badge
+  color: #24292e
+  display: flex
+  align-items: center
+  font-size: 12px
+  padding: 3px 10px
+  border: 1px solid rgba(27, 31, 35, 0.2)
+  border-radius: 3px
+  background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%)
+  margin-left: 4px
+  font-weight: 600
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol
+
+  &:hover
+    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%)
+    border-color: rgba(27, 31, 35, 0.35)
+    background-position: -.5em
+
+  .material-icons
+    height: 16px
+    width: 16px
+    margin-right: 4px
+
+svg#clouds
+  position: fixed
+  bottom: -160px
+  left: -230px
+  z-index: -10
+  width: 1920px
+
+.h-small
+  display: none
+  margin-bottom: 1rem
+//   color: white
+
+.h-big
+  display: inline-flex
+  white-space: pre
+  margin-bottom: 2rem
+//   color: white
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px)
+  .h-small
+    display: inline-flex
+
+  .h-big
+    display: none
+
+  .ccard-container > *:not(.circle-link), .terminal
+    width: 100%
+
+  .ccard.ccard-orange
+    height: 80px !important
+    padding: 10px !important
+
+  .ccard
+    &:not(.highlight-ccard)
+      height: 50px
+      margin: 8px 0
+
+    &.highlight-ccard span
+      margin-left: 72px
+
+  .cc-icons
+    height: 40px
+    width: auto
+
+  svg#rocket-smoke
+    right: 120px
+    transform: rotate(-5deg)
+
+@media screen and (max-width: 640px)
+  .rrss svg
+    height: 1.5em
+
+  .h-small
+    display: none
+    visibility: hidden
+
+@media screen and (max-width: 575px)
+  svg#rocket-smoke
+    display: none
+    visibility: hidden
+
+/* boton de accion **/
+.cc_btn_play_animated
+  position: absolute
+  top: 70px
+  left: 45%
+
+.circle
+  display: block
+  position: absolute
+  top: -4px
+  left: -4px
+  width: 30px //120px
+  height: 30px //120px
+  stroke-dasharray: 1000px
+  stroke-dashoffset: 0
+  transform-origin: 50% 50%
+  transition: all .8s linear .2s, opacity 0s linear 0s
+
+.button-play
+  display: block
+  position: relative
+  border: 8px solid white
+  box-shadow: 0 4px 6px -3px rgba(black, .3), inset 0 3px 4px -2px rgba(black, .25)
+  position: relative
+  width: 45px //112px
+  height: 45px //112px
+  background: grey
+  background-image: linear-gradient(120deg, rgba(lighten(grey, 15%), .3) 50%, grey 51%)
+  border-radius: 50%
+  transition: all .2s cubic-bezier(0.68, -0.55, 0.465, 1.55) .2s, border-width .4s cubic-bezier(0.68, -0.55, 0.465, 1.55)
+
+  &:before
+    display: block
+    position: absolute
+    content: ""
+    bottom: 50%
+    left: 50%
+    width: 0
+    height: 0
+    border: 25px solid transparent
+    border-width: 13px 0px 13px 25px
+    border-radius: 0
+    border-left-color: white
+    transform: translate(-13px, 50%)
+
+  &:hover, &.active
+    border: 4px solid white
+    .circle
+      stroke-dasharray: -1000px
+      stroke-dashoffset: -500px
+      opacity: 0
+      transition: all 2s linear .3s, opacity .1s linear 2s
+
+    &:before
+      animation: playJump 0.5s linear infinite
+
+@keyframes playJump
+  0%
+    transform: translate(-13px, 60%) scale(1.1,0.7)
+  10%
+    transform: translate(-13px, 30%) scale(0.9,1.2)
+  20%
+    transform: translate(-13px, 15%)
+  40%
+    transform: translate(-13px, 10%)
+  50%
+    transform: translate(-13px, 10%)
+  55%
+    transform: translate(-13px, 18%)
+  60%
+    transform: translate(-13px, 20%)
+  65%
+    transform: translate(-13px, 25%)
+  70%
+    transform: translate(-13px, 30%)
+  90%
+    transform: translate(-13px, 60%) scale(1.2,0.7)
+  100%
+    transform: translate(-13px, 60%) scale(1.4,0.7)
+
+// video player 
+.video-player
+  display: flex
+  flex-direction: row
+  // align-items: left
+
+  svg
+    path
+      fill: white !important
+
+  .vp-left
+    position: absolute
+    top: 210px
+    left: 10px
+    color: white
+
+  .vp-right
+    position: absolute
+    top: 210px
+    right: 10px
+    color: white
+
+  #vp-timeline
+    // fill: white
+    width: 50px
+
+//** =================================
+// * Formulario de ingreso
+//====================================*/
+// palete colours
+$txt_primary    : #0cbe689f
+$txt_secondary  : #0783c4
+$txt_grey       : #888
+$txt_alert      : #cf2c17
+
+.wrapper
+  margin: 60px auto
+  max-width: 450px
+  width: 100%
+
+.wrapper h1
+  text-align: center
+  color: #FFF
+  font: 300 3.6em 'Roboto Condensed', 'Open Sans', Arial, 'Helvetica Neue', Sans-serif, Verdana
+  text-shadow: 0 2px 0 rgba(0,0,0,0.2)
+  margin-bottom: 40px
+
+.wrapper span
+  color: #74b5dd
+
+.ingreso
+  overflow: hidden
+  background: #FFF
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+  box-shadow: 0 0 100px rgba(255,255,255,0.15)
+    // width: 600px !important
+
+.ingreso h2
+  display: block
+  width: 100%
+  padding: 15px 0
+  margin-bottom: 40px
+  border-bottom: 1px solid #649bbd
+  color: #FFF
+  font: 400 2.38em 'Roboto Condensed', 'Open Sans', Arial, 'Helvetica Neue', Sans-serif, Verdana
+  text-align: center
+  text-shadow: 0 2px 0 rgba(0,0,0, 0.15)
+  background: #74b5dd
+  background: -webkit-linear-gradient(#78b7de, #6ea8cc)
+  background: -moz-linear-gradient(#78b7de, #6ea8cc)
+  background: -o-linear-gradient(#78b7de, #6ea8cc)
+  background: linear-gradient(#78b7de, #6ea8cc)
+  -webkit-box-shadow: inset 0 1px 1px rgba(255,255,255, 0.4)
+  -moz-box-shadow: inset 0 1px 1px rgba(255,255,255, 0.4)
+  box-shadow: inset 0 1px 1px rgba(255,255,255, 0.4)
+
+.ingreso button.close
+  position: absolute
+  top: 20px
+  right: 20px
+    // background: black
+
+.ingreso-container
+  padding: 0 20px 0px
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+.ingreso input[type=text]
+  margin: 0 10px 10px 10px
+  outline: 0
+  border-color: #73b2d9
+
+.ingreso p
+  font-family: 'Montserrat', sans-serif
+  letter-spacing: -0.2px
+  font-size: 1rem
+  margin-top: -20px
+  margin-bottom: 20px
+
+form
+  padding: 16px
+  width: 100%
+  margin: 0 auto
+
+.segment
+  padding: 10px 0
+  text-align: center
+
+.ingreso button, .ingreso input[type=text]
+  border: 0
+  outline: 0
+  font-size: 1rem
+  border-radius: 320px
+  padding: 8px
+  background-color: #EBECF0
+  text-shadow: 1px 1px 0 #FFF
+
+.ingreso button
+  padding: 8px
+
+.ingreso label
+  display: block
+  margin-bottom: 14px
+  width: 100%
+
+.ingreso input[type=text]
+  margin-right: 8px
+  box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF
+  width: 100%
+  box-sizing: border-box
+  transition: all 0.2s ease-in-out
+  appearance: none
+  -webkit-appearance: none
+
+.ingreso input[type=text]:focus
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF
+
+.ingreso button
+  color: #61677C
+  font-weight: bold
+  box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC
+  transition: all 0.2s ease-in-out
+  cursor: pointer
+  font-weight: 600
+
+.ingreso button:hover:not(:disabled)
+  box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC
+
+.ingreso button:active
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF
+
+.ingreso button .icon
+  margin-right: 8px
+
+.ingreso button.unit
+  border-radius: 8px
+  line-height: 0
+  width: 48px
+  height: 48px
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  margin: 0 8px
+  font-size: 24.2px
+
+.ingreso button.unit .icon
+  margin-right: 0
+
+.ingreso button.send
+  display: block
+  width: 100%
+  color: $txt_primary
+
+// validación formularios mensajes de error
+.ingreso .myalert
+  color: $txt_alert
+  background-color: rgba(121, 63, 150, 0.287)
+
+.ingreso .inputgood
+  border: 2px solid green
+  svg
+    path
+      fill: green !important
+
+.ingreso button.send:disabled
+  color: $txt_grey
+
+svg#lock path
+    fill : $txt_grey  // green when active
+
+.ingreso .input-group
+  display: flex
+  align-items: center
+  justify-content: flex-start
+
+.ingreso .input-group label
+  margin: 0
+  flex: 1
+
+.ingreso p.proposito
+  font-size: .8rem
+
+.unit svg#https path
+  fill: $txt_grey
+
+.unit svg#delete path
+  fill: red
+
+// svg#lock path 
+//   fill : green
+// 
+button.send
+  font-size: 1.2rem !important
+
+// checkbox
+div.checkboxing
+  display: inline-flex
+  padding: 10px 10px 0px
+
+div.checkboxing input[type=checkbox].justtobuy
+  position: relative
+  top: 0
+  left: 0
+  height: 25px
+  width: 25px
+  background-color: #eee
+
+div.checkboxing label span.small
+  font-size: .6rem
+  margin-left: 20px
+
+/* The container must be positioned relative: */
+/* custom-select*/
+
+.custom-select
+  box-sizing: border-box
+  width: 95%
+  padding: 0 !important
+  position: relative
+  left: 20px
+  height: 47.5px
+  background: white
+  box-shadow: 0 3px 0 rgba(0,0,0,.05)
+
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    width: 0
+    height: 0
+    right: 10px
+    bottom: 0
+    margin: auto
+    border-style: solid
+    border-width: 5px 5px 0 5px
+    border-color: #177fc5 transparent transparent transparent
+    pointer-events: none
+
+    &:before
+      width: 30px
+      position: absolute
+      top: 1px
+      right: 1px
+      bottom: 1px
+      background: whitesmoke
+      content: ''
+      pointer-events: none
+
+    &:hover
+      &:before
+        background: #ffcfcf
+
+    select
+      font-size: 14px
+      border: none
+      box-shadow: none
+      border-radius: 0
+      background: transparent
+      height: 100%
+      width: 100%
+      cursor: pointer
+      outline: none
+      padding-right: 35px
+      padding-left: 15px
+      border: 1px solid #071418
+
+        // Disable default styling on ff
+      -moz-appearance: none
+
+        // Disable ugly ass outline on firefox 
+      &:-moz-focusring
+        color: transparent
+        text-shadow: 0 0 0 #000
+
+        // Disable default styling on webkit browsers 
+        -webkit-appearance: none
+
+        // Disable default arrow on IE 11+
+        &::-ms-expand
+          display: none
+
+        &:focus
+          border: 2px solid #0a90b9
+
+// IE 9 only 
+@media all and (min-width:0\0) and (min-resolution:.001dpcm)
+  .custom-select
+    select
+      padding-right: 0
+
+      &:after, &:before
+        display: none
+
+// alerts
+.alert-md-color
+  background-color: #7B1FA2
+  border-color: #4A148C
+  color: #fff
+
+// validación formulario
+.yellow_registered
+  border: rgb(196, 179, 28) 6px solid !important
+
+.is-invalid
+  border: 1px solid red !important
+
+.is-valid
+  border: 3px solid green !important
+
+// button submit
+.border1
+  border: 3px solid rgba(15, 112, 31, 1) !important
+
+.border1:disabled
+  border: 3px solid rgba(0, 0, 0, 0.151) !important
+
+.border2
+  border: 3px solid rgb(165, 37, 44) !important

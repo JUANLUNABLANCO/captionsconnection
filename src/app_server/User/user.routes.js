@@ -1,16 +1,14 @@
 /* ####### MODULES ######*/
 const express           = require('express');
-/* ####### ROUTES #######*/
 const app_router        = express();
+/* ####### ROUTES #######*/
 /* ####### CONFIGS ######*/
 /* ####### MODELS #######*/
 /* ####### HELPERS ######*/
 /* ####### CONTROLLERS ##*/
-const channelController = require('./channel.controller');
+const userController    = require('./user.controller'); // channelController
 /* ####### MIDDLEWARES ##*/
-const mdValidateChannel = require('./channel.mdValidate');
-
-
+const mdValidateUser    = require('./user.mdValidate');
 
 // ########## NOTHING
 // GET http://localhost:3333/api/channel/
@@ -21,9 +19,9 @@ app_router.get('/', (req, res) =>{
 // ########## C
 // POST http://localhost:3333/api/channel/register 
 // HASK: cualquiera puede registrarlo, deberías mandar un código a su email de confirmación, EN EL FUTURE
-app_router.post('/register',                mdValidateChannel.channelForm_ChannelSave,      channelController.youtubeChannelClientRegister );
+app_router.post('/register',            mdValidateUser.userForm_userRegister,       userController.Register );
 // http://localhost:3333/api/channel/check-channel-exists
-app_router.post('/check-channel-exists',    mdValidateChannel.channelForm_CheckNameExists,  channelController.checkChannelNameExists);
+app_router.post('/check-email-exists',  mdValidateUser.userForm_checkEmailExists,   userController.checkEmailExists);
 // ########## R
 // GET: http://localhost:3333/api/channel/show-all              [ADMIN]
 // GET: http://localhost:3333/api/channel/details:idChannel     [ADMIN] || [OWNNER]

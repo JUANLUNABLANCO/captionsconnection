@@ -1,16 +1,22 @@
+// palette
+@import './config-vars'
+.debug
+  border: 1px solid red
 // ###########################################################################################################################
 // ################
 // ## index      ##
 // ################
     // reset
     // tipography
-    // palette
+    
     // example mixins
     // texts
     // estructure
         // body
-        // footer
-    // my-components
+            // header
+            // icons, animations
+            // footer
+    // my-components commons
         // features
         // tooltips
     // effects
@@ -30,9 +36,9 @@ summary, time, mark, audio, video
     margin: 0
     padding: 0
     border: 0
-    font-size: 100%
-    font: inherit
-    vertical-align: baseline
+    // font-size: 100%
+    // font: inherit
+    // vertical-align: baseline
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -57,214 +63,26 @@ table
     border-collapse: collapse
     border-spacing: 0
 
+.jumbotron
+    margin-right: 0
+    margin-left: 0
+    padding-right: 0
+    padding-left: 0
+
 
 // ################
 // ## tipography ##
 // ################
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700")
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,400i,700")
 body
-  font-family: Montserrat, sans-serif
+    // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    font-family: Rubik 
+    font-weight: 500
+    p
+      font-size: 1rem
+      line-height: 1rem
     
-// ################
-// ## palette    ##
-// ################
-$black: #1b1f23	// $bg-black, $text-black, $tooltip-background-color
-$white: #fff	    // $border-white, $bg-white, $text-white, $tooltip-text-color
-$gray-000: #fafbfc	// $bg-gray-light
-$gray-100: #f6f8fa	// $bg-gray
-
-$gray-200: #e1e4e8 // $border-gray, $border-color
-$gray-300: #d1d5da // border-gray-dark, $bg-diffstat-neutral
-
-$gray-400: #959da5 // gray-light
-
-$gray-500: #6a737d //	$gray, $text-gray-light
-
-$gray-600: #586069 //	$text-gray
-
-$gray-700: #444d56 //	$border-gray-darker
-
-$gray-800: #2f363d //	
-
-$gray-900: #24292e //	$gray-dark, $bg-gray-dark, $text-gray-dark
-
-$blue-000: #f1f8ff //	$bg-blue-light
-
-$blue-100: #dbedff //	
-
-$blue-200: #c8e1ff //	$border-blue-light
-
-$blue-300: #79b8ff //	
-
-$blue-400: #2188ff //	
-
-$blue-500: #0366d6 //	$blue, $border-blue, $bg-blue, $text-blue
-
-$blue-600: #005cc5 //	
-
-$blue-700: #044289 //	
-
-$blue-800: #032f62 //	
-
-$blue-900: #05264c //	
-
-$green-000: #f0fff4 //	
-
-$green-100: #dcffe4 //	$bg-green-light
-
-$green-200: #bef5cb //	
-
-$green-300: #85e89d //	
-
-$green-400: #34d058 //	$border-green
-
-$green-500: #28a745 //	$green, $bg-green
-
-$green-600: #22863a //	$text-green
-
-$green-700: #176f2c //	
-
-$green-800: #165c26 //	
-
-$green-900: #144620 //	
-
-$yellow-000: #fffdef //	
-
-$yellow-100: #fffbdd //	
-
-$yellow-200: #fff5b1 //	$bg-yellow-light
-
-$yellow-300: #ffea7f //	
-
-$yellow-400: #ffdf5d //	
-
-$yellow-500: #ffd33d //	$yellow, $bg-yellow
-
-$yellow-600: #f9c513 //	$border-yellow
-
-$yellow-700: #dbab09 //	$bg-yellow-dark
-
-$yellow-800: #b08800 //	$text-yellow
-
-$yellow-900: #735c0f //	
-
-$orange-000: #fff8f2 //	
-
-$orange-100: #ffebda //	
-
-$orange-200: #ffd1ac //	
-
-$orange-300: #ffab70 //	
-
-$orange-400: #fb8532 //	
-
-$orange-500: #f66a0a //	$orange
-
-$orange-600: #e36209 //	$text-orange-light
-
-$orange-700: #d15704 //	$bg-orange
-
-$orange-800: #c24e00 //	
-
-$orange-900: #a04100 //	$text-orange
-
-$red-000: #ffeef0 //	$bg-red-light
-
-$red-100: #ffdce0 //	
-
-$red-200: #fdaeb7 //	
-
-$red-300: #f97583 //	$border-red-light
-
-$red-400: #ea4a5a //	
-
-$red-500: #d73a49 //	$red, $border-red, $bg-red
-
-$red-600: #cb2431 //	$text-red, $bg-diffstat-deleted
-
-$red-700: #b31d28 //	
-
-$red-800: #9e1c23 //	
-
-$red-900: #86181d //	
-
-$purple-000: #f5f0ff //	$bg-purple-light
-
-$purple-100: #e6dcfd //	
-
-$purple-200: #d1bcf9 //	
-
-$purple-300: #b392f0 //	
-
-$purple-400: #8a63d2 //	
-
-$purple-500: #6f42c1 //	$purple, $border-purple, $bg-purple, $text-purple
-
-$purple-600: #5a32a3 //	
-
-$purple-700: #4c2889 //	
-
-$purple-800: #3a1d6e //	
-
-$purple-900: #29134e //	
-
-$pink-000: #ffeef8 //	
-
-$pink-100: #fedbf0 //	
-
-$pink-200: #f9b3dd //	
-
-$pink-300: #f692ce //	
-
-$pink-400: #ec6cb9 //	
-
-$pink-500: #ea4aaa //	$bg-pink, $text-pink
-
-$pink-600: #d03592 //	
-
-$pink-700: #b93a86 //	
-
-$pink-800: #99306f //	
-
-$pink-900: #6d224f //	
-
-$black-fade-15: rgba(27, 31, 35, 0.15) //	$border-black-fade, $border-color-button
-
-$black-fade-30: rgba(27, 31, 35, 0.3) //	
-
-$black-fade-50: rgba(27, 31, 35, 0.5) //	$bg-black-fade
-
-$black-fade-70: rgba(27, 31, 35, 0.7) //	
-
-$black-fade-85: rgba(27, 31, 35, 0.85) //	
-
-$white-fade-15: rgba(255, 255, 255, 0.15) //	$border-white-fade
-
-$white-fade-30: rgba(255, 255, 255, 0.3) //	
-
-$white-fade-50: rgba(255, 255, 255, 0.5) //	
-
-$white-fade-70: rgba(255, 255, 255, 0.7) //	
-
-$white-fade-85: rgba(255, 255, 255, 0.85) //	
-
-$red: #d73a49 //	$border-red
-
-$purple: #6f42c1 //	$border-purple, $text-purple
-
-$blue: #0366d6 //	
-
-$green: #28a745 //	
-
-$yellow: #ffd33d //	
-
-$orange: #f66a0a //	
-
-$gray-dark: #24292e //	
-
-$gray-light: #959da5 //	
-
-$gray: #6a737d //
 
 
 // ##########################
@@ -317,7 +135,7 @@ h1.invertido
 // ##########################
 // ## estructure           ##
 // ##########################
-// body
+// ##### body
 body
     background: rgb(255, 255, 255)
     background: -moz-linear-gradient(61deg, rgb(255, 255, 255) 63%, rgb(63, 171, 228) 97%)
@@ -325,15 +143,253 @@ body
     background: -o-linear-gradient(61deg, rgb(255, 255, 255) 63%, rgb(63, 171, 228) 97%)
     background: -ms-linear-gradient(61deg, rgb(255, 255, 255) 63%, rgb(63, 171, 228) 97%)
     background: linear-gradient(151deg, rgb(255, 255, 255) 63%, rgb(63, 171, 228) 97%)
-// footer
+
+// ##### header
+.navbar-brand 
+    padding: 0px !important
+    cursor: pointer
+    .logo-header
+        max-width: 50px
+
+.spacer
+  flex: 1
+
+.rrss
+  width: 200px
+  padding: auto
+  // border: 1px solid red
+
+// ################ icons
+// button.cross-center
+//     display: flex
+//     align-items: center
+//     padding: 0
+//     border: 0
+//     background: #EEEEEE
+//     border-radius: 100%
+//     width: 40px
+//     height: 40px
+//     color: #FFFFFF
+//     overflow: hidden
+//     // debug
+//     // border: 1px solid red
+
+img.icon
+    width: 100%
+    height: 100%
+    border-radius: 100%
+    overflow: hidden
+    // debug
+    // border: 1px solid red
+/* ################################ Keyframes: wobble-hor-bottom */
+ul.wobblehb 
+  display: flex
+  list-style: none
+  z-index: 100
+
+
+ul.wobblehb li 
+  position: relative
+  display: block
+  color: #666
+  font-size: 20px
+  height: 50px
+  width: 50px
+  background: #fff // $blue-dark-brand // $blue-primary
+  line-height: 50px
+  border-radius: 50%
+  margin: 0 15px
+  cursor: pointer
+  transition: 0.5s
+
+
+ul.wobblehb li:before 
+  position: absolute
+  content: ""
+  top: 0
+  left: 0
+  /*background: #A873E8*/
+  height: 100%
+  width: 100%
+  border-radius: 50%
+  z-index: -1
+  transform: scale(0.9)
+  transition: 0.5s
+  // debug
+//   border: 1px solid red
+
+
+
+ul.wobblehb li:nth-child(1):before 
+  background: #f15bb5
+
+
+ul.wobblehb li:nth-child(2):before 
+  background: #7222d3
+
+
+ul.wobblehb li:nth-child(3):before 
+  background: #fee020
+
+
+ul.wobblehb li:nth-child(4):before 
+  background: #00ccb1
+
+
+ul.wobblehb li:hover:before 
+  transform: scale(1.2)
+  /*box-shadow: 0 0 15px #A873E8*/
+  filter: blur(3px)
+  animation: wobble-hor-bottom 0.8s both
+
+
+ul.wobblehb li:nth-child(1):hover:before 
+  box-shadow: 0 0 15px #f15bb5
+
+
+ul.wobblehb li:nth-child(2):hover:before 
+  box-shadow: 0 0 15px #7222d3
+
+
+ul.wobblehb li:nth-child(3):hover:before 
+  box-shadow: 0 0 15px #fee020
+
+
+ul.wobblehb li:nth-child(4):hover:before 
+  box-shadow: 0 0 15px #00ccb1
+
+
+ul.wobblehb li:nth-child(1):hover 
+  color: #f58ecc
+  box-shadow: 0 0 15px #f15bb5
+  text-shadow: 0 0 15px #f15bb5
+
+
+ul.wobblehb li:nth-child(2):hover 
+  color: #bd96ee
+  box-shadow: 0 0 15px #7222d3
+  text-shadow: 0 0 15px #7222d3
+
+
+ul.wobblehb li:nth-child(3):hover 
+  color: #feee85
+  box-shadow: 0 0 15px #fee020
+  text-shadow: 0 0 15px #fee020
+
+
+ul.wobblehb li:nth-child(4):hover 
+  color: #99fff1
+  box-shadow: 0 0 15px #00ccb1
+  text-shadow: 0 0 15px #00ccb1
+
+
+.wobble-hor-bottom 
+  -webkit-animation: wobble-hor-bottom 0.8s both
+  animation: wobble-hor-bottom 0.8s both
+
+
+/* Keyframes */
+@-webkit-keyframes wobble-hor-bottom 
+  0%, 100% 
+    -webkit-transform: translateX(0%)
+    transform: translateX(0%)
+    -webkit-transform-origin: 50% 50%
+    transform-origin: 50% 50%
+  
+  15% 
+    -webkit-transform: translateX(-30px) rotate(-6deg)
+    transform: translateX(-30px) rotate(-6deg)
+  
+  30% 
+    -webkit-transform: translateX(15px) rotate(6deg)
+    transform: translateX(15px) rotate(6deg)
+  
+  45% 
+    -webkit-transform: translateX(-15px) rotate(-3.6deg)
+    transform: translateX(-15px) rotate(-3.6deg)
+  
+  60% 
+    -webkit-transform: translateX(9px) rotate(2.4deg)
+    transform: translateX(9px) rotate(2.4deg)
+  
+  75% 
+    -webkit-transform: translateX(-6px) rotate(-1.2deg)
+    transform: translateX(-6px) rotate(-1.2deg)
+  
+
+@keyframes wobble-hor-bottom 
+  0%, 100% 
+    -webkit-transform: translateX(0%)
+    transform: translateX(0%)
+    -webkit-transform-origin: 50% 50%
+    transform-origin: 50% 50%
+  
+  15% 
+    -webkit-transform: translateX(-30px) rotate(-6deg)
+    transform: translateX(-30px) rotate(-6deg)
+  
+  30% 
+    -webkit-transform: translateX(15px) rotate(6deg)
+    transform: translateX(15px) rotate(6deg)
+  
+  45% 
+    -webkit-transform: translateX(-15px) rotate(-3.6deg)
+    transform: translateX(-15px) rotate(-3.6deg)
+  
+  60% 
+    -webkit-transform: translateX(9px) rotate(2.4deg)
+    transform: translateX(9px) rotate(2.4deg)
+  
+  75% 
+    -webkit-transform: translateX(-6px) rotate(-1.2deg)
+    transform: translateX(-6px) rotate(-1.2deg)
+
+/* keyframes: wobble-hor-bottom ########################### */
+
+// ############################################# CSS ANIMATIONS LIBRARY
+    // npm install animate.css --save
+    // O <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    // class="animate__animated animate__backInLeft"
+// ############################################# CSS ANIMATIONS LIBRARY
+
+.toolbar
+  // position: fixed
+  // top: 0
+  // left: 0
+  // right: 0
+  height: 84px !important
+  padding: 8px !important
+  display: flex
+  align-items: center
+  background-color: #1976D2 //#0783c4
+  color: white
+  font-weight: 600
+  z-index: 200
+
+  img
+    margin: 0 16px
+
+  #twitter-logo
+    height: 40px
+    margin: 0 16px
+
+    &:hover
+      opacity: 0.8
+       
+
+// ##### footer
 footer
     padding-top: 3em
     padding-bottom: 3em
 .logo-footer 
     max-width: 100%
 
+
+.list-social-icon, .footer-brand
+    cursor: pointer
+
 // ##########################
-// ## my-componets          ##
+// ## my-componets commons ##
 // ##########################
 // features
 #features
@@ -343,12 +399,12 @@ footer
     position: center
     padding: 3rem 0
 
-// tooltips customClass debe estar en este archivo raiz porque es un elemento forRoot()
-.customClass .tooltip-inner
+// tooltips tooltipCustomClass debe estar en este archivo raiz porque es un elemento forRoot()
+.tooltipCustomClass .tooltip-inner
     // color: rgb(15, 14, 14) !important
     background: rgb(42, 146, 73) !important
       
-.customClass .tooltip-arrow.arrow::before
+.tooltipCustomClass .tooltip-arrow.arrow::before
     // color: rgb(15, 14, 14) !important
     border-top-color: rgb(42, 146, 73) !important
 
@@ -374,7 +430,12 @@ footer
   
     &.fx-text-deepshadow 
         color: #e0dfdc
-        background-color: #333
+        background: #333
+        // background: -moz-linear-gradient(61deg, #333 63%, rgb(63, 171, 228) 97%)
+        // background: -webkit-linear-gradient(61deg, rgb(255, 255, 255) 63%, rgb(63, 171, 228) 97%)
+        // background: -o-linear-gradient(61deg, rgb(255, 255, 255) 63%, rgb(63, 171, 228) 97%)
+        // background: -ms-linear-gradient(61deg, rgb(255, 255, 255) 63%, rgb(63, 171, 228) 97%)
+        background: linear-gradient(151deg, $blue-300 43%, $blue-800  17%, $blue-700 75%)
         letter-spacing: .1em
         text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9)
   

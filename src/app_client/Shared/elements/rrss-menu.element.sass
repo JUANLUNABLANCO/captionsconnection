@@ -1,0 +1,206 @@
+@import '../../../config-vars'
+.base 
+  z-index: 9000
+  position: fixed
+  top: 0px
+  left: 0px
+  background-color: #FFFFFF
+  width: 98px
+  height: 98px
+  -webkit-transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1)
+  transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1)
+  border-bottom-right-radius: 100%
+
+.base .rrss-menu 
+  z-index: 10000
+  background-color: #FFFFFF
+  position: absolute
+  top: 0px
+  left: 0px
+  width: 100px
+  height: 100px
+  border-bottom-right-radius: 200px
+  cursor: pointer
+  -webkit-transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1), background-color 1s ease
+  transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1), background-color 1s ease
+
+.base .rrss-menu .icon 
+  position: absolute
+  width: 25px
+  height: 25px
+  top: 50%
+  left: 50%
+  -webkit-transform: translate(-100%, -100%)
+  transform: translate(-100%, -100%)
+
+.base .rrss-menu .icon:before, .base .rrss-menu .icon:after 
+  content: ''
+  -webkit-transform: rotate(0deg)
+  transform: rotate(0deg)
+  -webkit-transition: top 0.5s ease 0.5s, background-color 0.75s ease 0.25s, -webkit-transform 0.5s ease
+  transition: top 0.5s ease 0.5s, background-color 0.75s ease 0.25s, -webkit-transform 0.5s ease
+  transition: top 0.5s ease 0.5s, transform 0.5s ease, background-color 0.75s ease 0.25s
+  transition: top 0.5s ease 0.5s, transform 0.5s ease, background-color 0.75s ease 0.25s, -webkit-transform 0.5s ease
+
+.base .rrss-menu .icon .bar, .base .rrss-menu .icon:before, .base .rrss-menu .icon:after 
+  position: absolute
+  height: 5px
+  left: 0px
+  right: 0px
+  border-radius: 5px
+  background-color: #21264b
+
+.base .rrss-menu .icon .bar 
+  -webkit-transition: opacity 0s linear 0.5s, background-color 0.95s ease 0.25s
+  transition: opacity 0s linear 0.5s, background-color 0.95s ease 0.25s
+  opacity: 1
+  top: 10px
+
+.base .rrss-menu .icon:before 
+  top: 0px
+
+.base .rrss-menu .icon:after 
+  top: initial
+  top: 20px
+
+.base .icons 
+  z-index: 9800
+  position: absolute
+  top: 0px
+  left: 0px
+
+.base .icons > * 
+  position: absolute
+  font-size: 40px
+  color: #21264B
+  -webkit-transition: 0.3s cubic-bezier(0.5, -0.25, 0.05, 1)
+  transition: 0.3s cubic-bezier(0.5, -0.25, 0.05, 1)
+
+.base .icons .fa-instagram 
+  top: 35px
+  left: 0px
+  -webkit-transition-delay: 0.2s
+  transition-delay: 0.2s
+
+.base .icons .fa-facebook-f 
+  top: 0px
+  left: 0px
+  color:#fff
+  -webkit-transition-delay: 0.1s
+  transition-delay: 0.1s
+
+.base .icons .fa-twitter 
+  top: 0px
+  left: 35px
+
+.base .icons .fa-youtube
+  top: 15px
+  left: 15px 
+
+
+.base .section-static.i1
+  z-index: 9400
+  width: 100px
+  height: 100px
+  -moz-border-radius: 0 0 100%  0
+  -webkit-border-radius: 0 0 100% 0
+  border-radius: 0 0 100% 0
+  position: absolute
+  top: 0px
+  left: 0px
+  -webkit-transform-origin: 0% 0%
+  transform-origin: 0% 0%
+  -webkit-transition: width 1s cubic-bezier(0.5, -0.75, 0.05, 1), height 1s cubic-bezier(0.5, -0.75, 0.05, 1)
+  transition: width 1s cubic-bezier(0.5, -0.75, 0.05, 1), height 1s cubic-bezier(0.5, -0.75, 0.05, 1)
+
+.base .section-static.i1:hover 
+  background-color:  $gray-900 // #EAEAEA
+
+// .base .section-static.top 
+//   -webkit-transform: rotate(-45deg)
+//   transform: rotate(-45deg)
+//   border-bottom-right-radius: 400px
+
+// .base .section-static.bottom 
+//   -webkit-transform: rotate(45deg)
+//   transform: rotate(45deg)
+//   border-bottom-right-radius: 400px
+
+.base.menu-close 
+  width: 300px
+  height: 300px
+  -webkit-transition: all 1.25s cubic-bezier(0.5, 0, 0.05, 1.75)
+  transition: all 1.25s cubic-bezier(0.5, 0, 0.05, 1.75)
+
+.base.menu-close .rrss-menu 
+  width: 150px
+  height: 150px
+  -webkit-transition: all 1s cubic-bezier(0.5, 0, 0.05, 1.75), background-color 1s ease
+  transition: all 1s cubic-bezier(0.5, 0, 0.05, 1.75), background-color 1s ease
+  background-color: #21264B
+
+.base.menu-close .rrss-menu .icon .bar, .base.menu-close .rrss-menu .icon:before, .base.menu-close .rrss-menu .icon:after 
+  background-color: #FFFFFF
+
+.base.menu-close .rrss-menu .icon .bar 
+  opacity: 0
+
+.base.menu-close .rrss-menu .icon:before, .base.menu-close .rrss-menu .icon:after 
+  -webkit-transition: top 0.5s linear, background-color 0.75s ease 0.25s, -webkit-transform 0.5s ease 0.5s
+  transition: top 0.5s linear, background-color 0.75s ease 0.25s, -webkit-transform 0.5s ease 0.5s
+  transition: top 0.5s linear, transform 0.5s ease 0.5s, background-color 0.75s ease 0.25s
+  transition: top 0.5s linear, transform 0.5s ease 0.5s, background-color 0.75s ease 0.25s, -webkit-transform 0.5s ease 0.5s
+
+.base.menu-close .rrss-menu .icon:before 
+  top: 10px
+  -webkit-transform: rotate(-30deg)
+  transform: rotate(-30deg)
+
+.base.menu-close .rrss-menu .icon:after 
+  top: 10px
+  -webkit-transform: rotate(30deg)
+  transform: rotate(30deg)
+
+.base.menu-close .icons 
+  position: absolute
+  top: 0px
+  left: 0px
+
+.base.menu-close .icons > * 
+  position: absolute
+  font-size: 40px
+  color: $purple-300 //#21264B
+  -webkit-transition: 0.3s cubic-bezier(0.5, 0, 0.05, 1.75) 0.7s
+  transition: 0.3s cubic-bezier(0.5, 0, 0.05, 1.75) 0.7s
+  pointer-events: none
+
+.base.menu-close .icons .fa-instagram 
+  top: 30px
+  left: 215px
+
+.base.menu-close .icons .fa-facebook-f 
+  top: 160px
+  left: 110px
+  -webkit-transition-delay: 0.65s
+  transition-delay: 0.65s
+
+.base.menu-close .icons .fa-twitter 
+  top: 200px
+  left: 35px
+  -webkit-transition-delay: 0.8s
+  transition-delay: 0.8s
+
+.base.menu-close .icons .fa-youtube
+  top: 100px
+  left: 170px
+
+.base.menu-close .icons i.selected
+  color: $purple-500
+
+
+.base.menu-close .section-static 
+  width: 300px
+  height: 300px
+  -webkit-transition: width 1.25s cubic-bezier(0.5, 0, 0.05, 2), height 1.25s cubic-bezier(0.5, 0, 0.05, 2)
+  transition: width 1.25s cubic-bezier(0.5, 0, 0.05, 2), height 1.25s cubic-bezier(0.5, 0, 0.05, 2)
+

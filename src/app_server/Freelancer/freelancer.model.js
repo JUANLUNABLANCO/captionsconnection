@@ -1,17 +1,30 @@
+/* ####### MODULES ######*/
 const mongoose  = require('../_connections/db_connect');
+const bcrypt    = require('bcrypt');
 const Schema    = mongoose.Schema;
-const CB        = require('../_configs/constsBusiness');
+/* ####### ROUTES #######*/
+/* ####### CONFIGS ######*/
+const freelancerConfig    = require('./freelancer.config');
+/* ####### MODELS #######*/
+/* ####### HELPERS ######*/
+/* ####### CONTROLLERS ##*/
+/* ####### MIDDLEWARES ##*/
 
 const FreelancerSchema = new Schema({
     
-    email:          {type: String, required: true, index: {unique: true}, match: [CB.regExEmail, "El 'email' no es válido "], lowercase: true, trim: true},
+    // desde usuario
+    _idUser:        {type: Schema.Types.ObjectId, ref: 'user', required: false }, // puede venir por el registro de un usuario
+    registered:     {type: Boolean, required: false, default: false}, // puede registrar un freelancer si registrar un user
+    // REQUERIDOS desde freelancer 
+    email:          {type: String, required: true, index: {unique: true}, match: [freelancerConfig.regExEmail, "El 'email' no es válido "], lowercase: true, trim: true},
     
-    nativeLanguage: {type: String, required: true,  enum: CB.arrLanguages },
-    languages:      [{type: String, required: true, enum: CB.arrLanguages }],  
+    nativeLanguage: {type: String, required: true,  enum: freelancerConfig.arrLanguages },
+    languages:      [{type: String, required: true, enum: freelancerConfig.arrLanguages }],  
     // ampliar enum en el PEB y poner levels for languages level 1 (medio), level 2 (alto), level 3 (nativo)
-    habilities:     [{type: String, required: true, enum: CB.arrHabilities}],
-    country:        {type: String, required: true,  enum: CB.arrCountries},
+    habilities:     [{type: String, required: true, enum: freelancerConfig.arrHabilities}],
+    country:        {type: String, required: true,  enum: freelancerConfig.arrCountries},
     
+    // NO REQUERIDOS
     promotionPoints:    {type: Number, required: false, default: 0},
     alarm :             {type: Boolean, required: false, default: false },
     visible:            {type: Boolean, required: false, default: true }
@@ -21,21 +34,21 @@ const FreelancerSchema = new Schema({
 });
 
 FreelancerSchema.pre('save', function (next){
-    console.log('VALUE COUNT: ', CB.arrCountryValues[CB.arrCountries.indexOf(this.country)]);
-    console.log('VALUE LANG: ', CB.arrLanguages.indexOf(this.nativeLanguage));
+    // console.log('VALUE COUNT: ', freelancerConfig.arrCountryValues[freelancerConfig.arrCountries.indexOf(this.country)]);
+    // console.log('VALUE LANG: ', freelancerConfig.arrLanguages.indexOf(this.nativeLanguage));
     
     let countryPoints, nativePoints;
-    let arrayNV             = CB.arrNativeValues; // [2, 3, 1.5, 1, 0.5];
-    let arrayCV             = CB.arrCountryValues; // [7, 6, 5, 4, 3, 2, 1, 0];
-    nativePoints            = arrayNV[CB.arrLanguages.indexOf(this.nativeLanguage)];
-    countryPoints           = arrayCV[CB.arrCountries.indexOf(this.country)];
+    let arrayNV             = freelancerConfig.arrNativeValues; // [2, 3, 1.5, 1, 0.5];
+    let arrayCV             = freelancerConfig.arrCountryValues; // [7, 6, 5, 4, 3, 2, 1, 0];
+    nativePoints            = arrayNV[freelancerConfig.arrLanguages.indexOf(this.nativeLanguage)];
+    countryPoints           = arrayCV[freelancerConfig.arrCountries.indexOf(this.country)];
     this.promotionPoints    = 
                             this.habilities.length  * 10000 +
                             this.languages.length   * 1000  +
                             countryPoints           * 100   +
                             nativePoints            * 10; // 2315
 
-    console.log('Result: ' + this.habilities.length  + ' * 10000 ' + 
+    _PRINT.Console('Result: ' + this.habilities.length  + ' * 10000 ' + 
                             this.languages.length + ' * 1000 + ' + 
                             countryPoints + ' * 100 + ' + 
                             nativePoints+ ' * 10 + ' + 
@@ -56,9 +69,9 @@ FreelancerSchema.pre('save', function (next){
     console.log('Alarm: ', this.alarm);
     next();                       
 });
-// después de crear el channel debe guardar ciertos datos en 'client'
+
 FreelancerSchema.post('save', (doc) => {
-    // console.log('NEW CAHNNEL: ', doc);
+    // console.log('NEW FREELANCER: ', doc);
     if (_ENV == 'development'){
         console.log('promotionPoints: ', doc.promotionPoints);
     }
@@ -66,8 +79,20 @@ FreelancerSchema.post('save', (doc) => {
         // notification to admin
     }
 });
-// FreelancerSchema.virtual('clientType').get(function(){
-//     return CB.arrClientTypes[CB.arrChannelTypes.indexOf(this.channelType)];
-// });
+// funcion de encriptacion
+FreelancerSchema.methods.encryptPassword = async (password) => {
+    // HASK: recortala a no mas de 128 digitos bruto ¿SI TE METEN UN BLOB EXPLOTA LA BASE DE DATOS?
+    return await bcrypt.hash(password, await bcrypt.genSalt( 10));
+}
+// funcion de comparacion de contraseñas encriptadas
+FreelancerSchema.methods.matchPassword = async function (password){
+    return await bcrypt.compare (password, this.password);
+}
+// UserSchema.methods.confirmPasswords = function (password, confirmPassword){
+//     return (password == confirmPassword); // true | false
+// }
+FreelancerSchema.methods.confirmEmails = function (email, confirmEmail){
+    return (email == confirmEmail); // true | false
+}
 
 module.exports = mongoose.model('freelancer', FreelancerSchema);

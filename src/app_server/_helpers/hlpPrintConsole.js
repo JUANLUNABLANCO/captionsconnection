@@ -1,10 +1,11 @@
-exports.Console = (name, message)=>{
+exports.Console = (name, origin,  message)=>{
     var active  = _CONSOLE_ACTIVE;      // si activo pintará [graph, name, message] | no activo, pintará "" | o la ruta [graph, name]
     var route   = _CONSOLE_ROUTE;       // si activo pintará [graph, name]
     var graph   = _CONSOLE_GRAPH;      // si activo pintará [graph]
     // console.log(grsph, name, mesaage, active, route);
     // configuration
     name = name + ': ';
+    origin = 'in ' + origin + ' ';
 
     // inicio
     if (active){ //==true
@@ -12,7 +13,7 @@ exports.Console = (name, message)=>{
             message = name.replace(': ', '');
             console.log(graph, message);            // --> mensaje
         } else {
-            console.log(graph, name, message);      // --> name: mensaje
+            console.log(graph, name, origin, message);      // --> name: mensaje
         }        
     } else {
         if (!route) {

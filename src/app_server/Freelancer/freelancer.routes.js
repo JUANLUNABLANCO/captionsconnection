@@ -1,8 +1,7 @@
 const express           = require('express');
 const app_router        = express();
-const freelancerController = require('./freelancer.controller'); // freelancerController
-
-const mdValidateFreelancer        = require('./freelancer.mdValidate');
+const freelancerController      = require('./freelancer.controller');
+const mdValidateFreelancer      = require('./freelancer.mdValidate');
 
 // ########## NOTHING
 // GET http://localhost:3333/api/freelancer/                            [ANYBODY]
