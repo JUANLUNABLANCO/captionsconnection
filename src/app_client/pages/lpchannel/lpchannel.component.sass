@@ -103,8 +103,10 @@
   cursor: pointer
 
   &:hover
-    transform: translateY(-3px)
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35)
+    @include prefixInProperty (transform, translateY(-3px))
+    // transform: translateY(-3px)
+    @include prefixInProperty( box-shadow, 0 4px 17px rgba(0, 0, 0, 0.35))
+    // box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35)
 
     // svg.material-icons path 
     //   fill: rgb(105, 103, 103)
@@ -202,12 +204,19 @@ a
   justify-content: center
   align-items: center
   cursor: pointer
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+  -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+
   transition: 1s ease-out
 
   &:hover
-    transform: translateY(-0.25rem)
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2)
+    @include prefixInProperty (transform, translateY(-0.25rem))
+    // transform: translateY(-0.25rem)
+    @include prefixInProperty( box-sahdow, 0px 3px 15px rgba(0, 0, 0, 0.2) )
+    // box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2)
 
 div.terminal-footer
   margin-top: 8px
@@ -265,6 +274,102 @@ svg#clouds
   margin-bottom: 2rem
 //   color: white
 
+// ################## animated svg
+svg#rocket:not(.animated).animable 
+  opacity: 0
+                    
+svg#rocket 
+  animation: 1.5s 3 linear heartbeat, 3.5s infinite linear shake
+  animation-delay: 0s, 5s
+                    
+svg #freepik--background-simple--inject-94 
+  animation: 3s infinite linear shake
+  animation-delay: 1s
+
+// svg#rocket
+//   animation: 3.5s infinite linear shake
+//   animation-delay: 5s 
+                    
+@keyframes heartbeat 
+  0%
+    @include prefixInProperty( transform, scale(1) )     
+    // transform: scale(1)
+  10%
+    @include prefixInProperty( transform, scale(1.1) )      
+    // transform: scale(1.1)
+  30%
+    @include prefixInProperty( transform, scale(1) )      
+    // transform: scale(1)
+  40%
+    @include prefixInProperty( transform, scale(1) )      
+    // transform: scale(1)
+  50%
+    @include prefixInProperty( transform, scale(1.1) )      
+    // transform: scale(1.1)
+  60%
+    @include prefixInProperty( transform, scale(1) )     
+    // transform: scale(1)
+  100%
+    @include prefixInProperty( transform, scale(1) )      
+    // transform: scale(1)
+
+@-webkit-keyframes heartbeat 
+  0%
+    @include prefixInProperty( transform, scale(1) )     
+    // transform: scale(1)
+  10%
+    @include prefixInProperty( transform, scale(1.1) )      
+    // transform: scale(1.1)
+  30%
+    @include prefixInProperty( transform, scale(1) )      
+    // transform: scale(1)
+  40%
+    @include prefixInProperty( transform, scale(1) )      
+    // transform: scale(1)
+  50%
+    @include prefixInProperty( transform, scale(1.1) )      
+    // transform: scale(1.1)
+  60%
+    @include prefixInProperty( transform, scale(1) )     
+    // transform: scale(1)
+  100%
+    @include prefixInProperty( transform, scale(1) )      
+    // transform: scale(1)                        
+                    
+@keyframes shake 
+  10%, 90%
+    @include prefixInProperty( transform,  translate3d(-1px, 0, 0) )     
+    // transform: translate3d(-1px, 0, 0)
+  20%, 80% 
+    @include prefixInProperty( transform,  translate3d(-2px, 0, 0) )
+    // transform: translate3d(2px, 0, 0)
+
+  30%, 50%, 70%
+    @include prefixInProperty( transform,  translate3d(-4px, 0, 0) ) 
+    // transform: translate3d(-4px, 0, 0)
+
+  40%, 60%
+    @include prefixInProperty( transform,  translate3d(4px, 0, 0) ) 
+    // transform: translate3d(4px, 0, 0)
+
+@-webkit-keyframes shake 
+  10%, 90%
+    @include prefixInProperty( transform,  translate3d(-1px, 0, 0) )     
+    // transform: translate3d(-1px, 0, 0)
+  20%, 80% 
+    @include prefixInProperty( transform,  translate3d(-2px, 0, 0) )
+    // transform: translate3d(2px, 0, 0)
+
+  30%, 50%, 70%
+    @include prefixInProperty( transform,  translate3d(-4px, 0, 0) ) 
+    // transform: translate3d(-4px, 0, 0)
+
+  40%, 60%
+    @include prefixInProperty( transform,  translate3d(4px, 0, 0) ) 
+    // transform: translate3d(4px, 0, 0)
+
+// ################## animated svg
+
 /* Responsive Styles */
 @media screen and (max-width: 1200px)
   .h-small
@@ -296,6 +401,11 @@ svg#clouds
     right: 120px
     transform: rotate(-5deg)
 
+@media screen and (max-width: 900px)
+  svg#rocket
+    display: none
+    visibility: hidden
+
 @media screen and (max-width: 640px)
   .rrss svg
     height: 1.5em
@@ -308,6 +418,9 @@ svg#clouds
   svg#rocket-smoke
     display: none
     visibility: hidden
+
+
+
 
 /* boton de accion **/
 .cc_btn_play_animated
@@ -324,20 +437,31 @@ svg#clouds
   height: 30px //120px
   stroke-dasharray: 1000px
   stroke-dashoffset: 0
-  transform-origin: 50% 50%
+  @include prefixInProperty (transform-origin, 50% 50%)
+  // transform-origin: 50% 50%
   transition: all .8s linear .2s, opacity 0s linear 0s
 
 .button-play
   display: block
   position: relative
   border: 8px solid white
+  -webkit-box-shadow: 0 4px 6px -3px rgba(black, .3), inset 0 3px 4px -2px rgba(black, .25)
+  -moz-box-shadow: 0 4px 6px -3px rgba(black, .3), inset 0 3px 4px -2px rgba(black, .25)
+  -ms-box-shadow: 0 4px 6px -3px rgba(black, .3), inset 0 3px 4px -2px rgba(black, .25)
+  -o-box-shadow: 0 4px 6px -3px rgba(black, .3), inset 0 3px 4px -2px rgba(black, .25)  
   box-shadow: 0 4px 6px -3px rgba(black, .3), inset 0 3px 4px -2px rgba(black, .25)
   position: relative
   width: 45px //112px
   height: 45px //112px
   background: grey
-  background-image: linear-gradient(120deg, rgba(lighten(grey, 15%), .3) 50%, grey 51%)
+  @include prefixInArguments( background-image,  linear-gradient(120deg, rgba(lighten(grey, 15%), .3) 50%, grey 51%) )
+  // background-image: linear-gradient(120deg, rgba(lighten(grey, 15%), .3) 50%, grey 51%)
   border-radius: 50%
+
+  -webkit-transition: all .2s cubic-bezier(0.68, -0.55, 0.465, 1.55) .2s, border-width .4s cubic-bezier(0.68, -0.55, 0.465, 1.55)
+  -moz-transition: all .2s cubic-bezier(0.68, -0.55, 0.465, 1.55) .2s, border-width .4s cubic-bezier(0.68, -0.55, 0.465, 1.55)
+  -ms-transition: all .2s cubic-bezier(0.68, -0.55, 0.465, 1.55) .2s, border-width .4s cubic-bezier(0.68, -0.55, 0.465, 1.55)
+  -o-transition: all .2s cubic-bezier(0.68, -0.55, 0.465, 1.55) .2s, border-width .4s cubic-bezier(0.68, -0.55, 0.465, 1.55)
   transition: all .2s cubic-bezier(0.68, -0.55, 0.465, 1.55) .2s, border-width .4s cubic-bezier(0.68, -0.55, 0.465, 1.55)
 
   &:before
@@ -352,7 +476,8 @@ svg#clouds
     border-width: 13px 0px 13px 25px
     border-radius: 0
     border-left-color: white
-    transform: translate(-13px, 50%)
+    @include prefixInArguments( transform, translate(-13px, 50%) )
+    // transform: translate(-13px, 50%)
 
   &:hover, &.active
     border: 4px solid white
@@ -360,6 +485,10 @@ svg#clouds
       stroke-dasharray: -1000px
       stroke-dashoffset: -500px
       opacity: 0
+      -webkit-transition: all 2s linear .3s, opacity .1s linear 2s
+      -moz-transition: all 2s linear .3s, opacity .1s linear 2s
+      -ms-transition: all 2s linear .3s, opacity .1s linear 2s
+      -o-transition: all 2s linear .3s, opacity .1s linear 2s
       transition: all 2s linear .3s, opacity .1s linear 2s
 
     &:before
@@ -367,28 +496,73 @@ svg#clouds
 
 @keyframes playJump
   0%
-    transform: translate(-13px, 60%) scale(1.1,0.7)
+    @include prefixInArguments( transform, translate(13px, 60%) scale(1.1, 0.7))
+    // transform: translate(-13px, 60%) scale(1.1,0.7)
   10%
-    transform: translate(-13px, 30%) scale(0.9,1.2)
+    @include prefixInArguments( transform, translate(-13px, 30%) scale(0.9, 1.2))
+    // transform: translate(-13px, 30%) scale(0.9,1.2)
   20%
-    transform: translate(-13px, 15%)
+    @include prefixInArguments( transform, translate(-13px, 15%) )
+    // transform: translate(-13px, 15%)
   40%
-    transform: translate(-13px, 10%)
+    @include prefixInArguments( transform, translate(-13px, 10%) )
+    // transform: translate(-13px, 10%)
   50%
-    transform: translate(-13px, 10%)
+    @include prefixInArguments( transform, translate(-13px, 10%) )
+    // transform: translate(-13px, 10%)
   55%
-    transform: translate(-13px, 18%)
+    @include prefixInArguments( transform, translate(-13px, 18%) )
+    // transform: translate(-13px, 18%)
   60%
-    transform: translate(-13px, 20%)
+    @include prefixInArguments( transform, translate(-13px, 20%) )
+    // transform: translate(-13px, 20%)
   65%
-    transform: translate(-13px, 25%)
+    @include prefixInArguments( transform, translate(-13px, 25%) )
+    // transform: translate(-13px, 25%)
   70%
-    transform: translate(-13px, 30%)
+    @include prefixInArguments( transform, translate(-13px, 30%) )
+    // transform: translate(-13px, 30%)
   90%
-    transform: translate(-13px, 60%) scale(1.2,0.7)
+    @include prefixInArguments( transform, translate(-13px, 60%) scale(1.2,0.7) )
+    // transform: translate(-13px, 60%) scale(1.2,0.7)
   100%
-    transform: translate(-13px, 60%) scale(1.4,0.7)
+    @include prefixInArguments( transform, translate(-13px, 60%) scale(1.4,0.7) )
+    // transform: translate(-13px, 60%) scale(1.4,0.7)
 
+@-webkit-keyframes playJump
+  0%
+    @include prefixInArguments( transform, translate(13px, 60%) scale(1.1, 0.7))
+    // transform: translate(-13px, 60%) scale(1.1,0.7)
+  10%
+    @include prefixInArguments( transform, translate(-13px, 30%) scale(0.9, 1.2))
+    // transform: translate(-13px, 30%) scale(0.9,1.2)
+  20%
+    @include prefixInArguments( transform, translate(-13px, 15%) )
+    // transform: translate(-13px, 15%)
+  40%
+    @include prefixInArguments( transform, translate(-13px, 10%) )
+    // transform: translate(-13px, 10%)
+  50%
+    @include prefixInArguments( transform, translate(-13px, 10%) )
+    // transform: translate(-13px, 10%)
+  55%
+    @include prefixInArguments( transform, translate(-13px, 18%) )
+    // transform: translate(-13px, 18%)
+  60%
+    @include prefixInArguments( transform, translate(-13px, 20%) )
+    // transform: translate(-13px, 20%)
+  65%
+    @include prefixInArguments( transform, translate(-13px, 25%) )
+    // transform: translate(-13px, 25%)
+  70%
+    @include prefixInArguments( transform, translate(-13px, 30%) )
+    // transform: translate(-13px, 30%)
+  90%
+    @include prefixInArguments( transform, translate(-13px, 60%) scale(1.2,0.7) )
+    // transform: translate(-13px, 60%) scale(1.2,0.7)
+  100%
+    @include prefixInArguments( transform, translate(-13px, 60%) scale(1.4,0.7) )
+    // transform: translate(-13px, 60%) scale(1.4,0.7)
 // video player 
 .video-player
   display: flex
@@ -418,11 +592,6 @@ svg#clouds
 //** =================================
 // * Formulario de ingreso
 //====================================*/
-// palete colours
-$txt_primary    : #0cbe689f
-$txt_secondary  : #0783c4
-$txt_grey       : #888
-$txt_alert      : #cf2c17
 
 .wrapper
   margin: 60px auto
@@ -442,10 +611,10 @@ $txt_alert      : #cf2c17
 .ingreso
   overflow: hidden
   background: #FFF
-  -webkit-border-radius: 4px
-  -moz-border-radius: 4px
-  border-radius: 4px
-  box-shadow: 0 0 100px rgba(255,255,255,0.15)
+  @include prefixInProperty( border-radius, 4px)
+  // border-radius: 4px
+  @include prefixInProperty( box-shadow, 0 0 100px rgba(255,255,255,0.15) )
+  // box-shadow: 0 0 100px rgba(255,255,255,0.15)
     // width: 600px !important
 
 .ingreso h2
@@ -459,13 +628,10 @@ $txt_alert      : #cf2c17
   text-align: center
   text-shadow: 0 2px 0 rgba(0,0,0, 0.15)
   background: #74b5dd
-  background: -webkit-linear-gradient(#78b7de, #6ea8cc)
-  background: -moz-linear-gradient(#78b7de, #6ea8cc)
-  background: -o-linear-gradient(#78b7de, #6ea8cc)
-  background: linear-gradient(#78b7de, #6ea8cc)
-  -webkit-box-shadow: inset 0 1px 1px rgba(255,255,255, 0.4)
-  -moz-box-shadow: inset 0 1px 1px rgba(255,255,255, 0.4)
-  box-shadow: inset 0 1px 1px rgba(255,255,255, 0.4)
+  @include prefixInArguments( background, linear-gradient(#78b7de, #6ea8cc) )
+  // background: linear-gradient(#78b7de, #6ea8cc)
+  @include prefixInProperty( box-shadow, inset 0 1px 1px rgba(255,255,255, 0.4) )
+  // box-shadow: inset 0 1px 1px rgba(255,255,255, 0.4)
 
 .ingreso button.close
   position: absolute
@@ -475,9 +641,8 @@ $txt_alert      : #cf2c17
 
 .ingreso-container
   padding: 0 20px 0px
-  -webkit-box-sizing: border-box
-  -moz-box-sizing: border-box
-  box-sizing: border-box
+  @include prefixInProperty( box-sizing, border-box)
+  // box-sizing: border-box
 
 .ingreso input[type=text]
   margin: 0 10px 10px 10px
@@ -521,10 +686,12 @@ form
   margin-right: 8px
   box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF
   width: 100%
-  box-sizing: border-box
+  @include prefixInProperty( box-sizing, border-box)
+  // box-sizing: border-box
   transition: all 0.2s ease-in-out
-  appearance: none
-  -webkit-appearance: none
+  @include prefixInProperty(appearance, none)
+  // appearance: none
+  // -webkit-appearance: none
 
 .ingreso input[type=text]:focus
   box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF
@@ -667,7 +834,8 @@ div.checkboxing label span.small
     select
       font-size: 14px
       border: none
-      box-shadow: none
+      @include prefixInProperty( box-shadow, none)
+      // box-shadow: none
       border-radius: 0
       background: transparent
       height: 100%
@@ -679,15 +847,17 @@ div.checkboxing label span.small
       border: 1px solid #071418
 
         // Disable default styling on ff
-      -moz-appearance: none
+      @include prefixInProperty(appearance, none)
+      // -moz-appearance: none
 
         // Disable ugly ass outline on firefox 
       &:-moz-focusring
         color: transparent
         text-shadow: 0 0 0 #000
 
-        // Disable default styling on webkit browsers 
-        -webkit-appearance: none
+        // Disable default styling on webkit browsers
+        @include prefixInProperty(appearance, none) 
+        // -webkit-appearance: none
 
         // Disable default arrow on IE 11+
         &::-ms-expand
@@ -706,10 +876,31 @@ div.checkboxing label span.small
         display: none
 
 // alerts
+.wrapper-alerts
+  content: ''
+  z-index: 9990
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(24, 22, 22, 0.802)
+
+.wrapper-close
+  display: none
+  visibility: hidden
+
 .alert-md-color
+  position: fixed
+  top: 30%
+  left: 30%
+  // @include prefixInProperty(transform, translate(1000px, -300px))
+  transform: translate(500px, -50%)
+  z-index: 10000 !important
   background-color: #7B1FA2
   border-color: #4A148C
   color: #fff
+  // width: 400px
 
 // validación formulario
 .yellow_registered

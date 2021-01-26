@@ -25,8 +25,12 @@ import { LpfreelancerComponent } from './lpfreelancer/lpfreelancer.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 // NGX BOOTSTRAP
-import { CollapseModule } from 'ngx-bootstrap/collapse'; // NEEDED: ???? está en el app.module es necesario aquí
+// NEEDED: ???? está en el app.module es necesario aquí
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { AlertModule } from 'ngx-bootstrap/alert';
+// import { ModalModule } from 'ngx-bootstrap/modal';
+// NEEDED: ???? está en el app.module es necesario aquí ##### por lo visto algunos no otros si hacen falta
 
 @NgModule({
     declarations: [
@@ -51,8 +55,11 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
         HttpClientModule,
 
         // ##### NGX BOOTSRAP
+        // estan en forRoot()
         CollapseModule,
-        TooltipModule,
+        TooltipModule, //
+        // ModalModule, //
+        AlertModule,
         PAGES_ROUTING,
     ],
     exports: [

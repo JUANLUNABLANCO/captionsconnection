@@ -1,0 +1,170 @@
+@import '../../../config-vars'
+	
+$npages : 8
+$bg: #2B2B38
+$bg-odd: $blue-500 // darkslateblue // $blue-400 // #F5004F
+	
+.contenedor
+	display: flex
+	flex-direction: column
+	align-items: center
+
+	background: $bg // deeppink
+
+	form.slider-controls
+		input
+			position: fixed
+			bottom: 20px
+			height: 0
+			margin: 1rem 1rem 3rem
+			z-index: 1
+			&:checked
+				outline: 0
+				border: 0
+			&:before
+				content: ""
+				position: absolute
+				display: inline-block
+				background: black
+				width: .8rem
+				height: .8rem
+				border: 1px solid rgba(0, 0, 0, .81) // rgba(255, 255, 255, 0.81)
+				border-radius: .8rem
+				cursor: pointer
+				transition: all .25s linear
+			&:checked:before 
+				background-color: $orange-500			
+			&:after
+				content: ""attr(titulo)""
+				position: relative
+				top: 30px
+				opacity: 0
+				color: white
+				font-size: 16px
+				display: block
+				min-width: 80px
+				transition: all .25s linear
+			&:checked:after
+				opacity: 1
+			&:hover:after:not(section)
+				opacity: 1		
+			// @for $i from 1 through $npages	
+			// 	&:nth-of-type(#{$i}):checked ~ .sections section
+			// 		transform: translateY(-#{($i - 1) * 100%})
+		input#slider0
+			transform: translateX(-80px)
+		input#slider1
+			transform: translateX(-60px)
+		input#slider2
+			transform: translateX(-40px)
+		input#slider3
+			transform: translateX(-20px)
+		input#slider4
+			// transform: translateX(60px)
+		input#slider5
+			transform: translateX(20px)
+		input#slider6
+			transform: translateX(40px)
+		input#slider7
+			transform: translateX(60px)
+		// input#slider8
+		// 	transform: translateX(80px)
+
+
+	.sections
+		position: relative
+		top: 0
+		left: 0
+		width: 100%
+		display: flex
+		flex-direction: column
+		
+		section
+			max-width: 100%
+			min-height: 100vh
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			background-color: $bg
+			color: #070707
+			z-index: 0
+			transition: all .75s cubic-bezier(0.75, 0.25, 0, 1.05)
+			&:nth-child(odd)
+				background-color: $bg-odd
+				color: white !important
+			// -webkit-transition: all 1500ms ease-out
+			// -moz-transition: all 1500ms ease-out
+			// -ms-transition: all 1500ms ease-out
+			// -o-transition: all 1500ms ease-out
+			// transition: all 1500ms ease-out
+
+			
+
+.content 
+	width: 100%
+	box-sizing: border-box
+	padding: 0 110px
+	
+	.block 
+		width: inherit
+		font:
+			size: 11px
+			weight: 400
+		line-height: 1.5
+		margin: 42px 0
+		display: flex
+		justify-content: center
+
+	
+		span
+			margin: 0 42px
+	
+			i
+				margin-bottom: 22px
+				@extend span
+				&:before
+					font-size: 30px
+
+.Slide:nth-child(even) .content .block
+	color: #717171
+
+
+
+.icon 
+	position: absolute
+	bottom: 30px
+	left: 0
+	right: 0
+	font-size: 14px
+	text-align: center
+	line-height: 1.5
+	display: flex
+	flex-direction: column
+
+#Slide5 .content .block
+	flex-direction: column
+	i
+		margin: 0 12px
+		vertical-align: middle
+
+strong
+	font-weight: 400
+
+h1
+	text-transform: uppercase
+
+ol
+	text-align: left
+	list-style-type: decimal
+
+a
+	text-decoration: none
+	color: inherit
+	transition: all .25s linear
+	&:hover
+		color: rebeccapurple
+
+
+		
+	

@@ -1,10 +1,4 @@
-import {
-    Component,
-    Renderer2,
-    ViewChild,
-    ElementRef,
-    OnInit,
-} from '@angular/core';
+import { Component, Renderer2, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
     selector: 'rrss-menu',
@@ -12,7 +6,7 @@ import {
     styleUrls: ['./rrss-menu.element.sass'],
 })
 export class RrssMenuElement {
-    @ViewChild('rrss_menu') rrssMenu: ElementRef;
+    @ViewChild('rrss_menu') rrssMenu: ElementRef; // $('rrss_menu')
     opened: boolean;
 
     constructor(private renderer: Renderer2) {

@@ -1,16 +1,17 @@
 // ##### ng
-import { Component, TemplateRef } from '@angular/core';
 import {
     AbstractControl,
     FormBuilder,
     FormGroup,
     Validators,
 } from '@angular/forms';
-import { ChannelService } from '../../services/Channel.service';
 import { Observable } from 'rxjs';
-
+import { Component, TemplateRef } from '@angular/core';
 // ##### ngx-bootstrap
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+
+// ##### servicios propios
+import { ChannelService } from '../../services/Channel.service';
 
 interface ErrorValidator {
     [s: string]: boolean;
@@ -19,13 +20,14 @@ interface ErrorValidator {
 @Component({
     selector: 'app-lpchannel',
     templateUrl: './lpchannel.component.html',
-    styleUrls: ['./lpchannelComponent.sass'],
+    styleUrls: ['./lpchannel.component.sass'],
 })
 export class LpchannelComponent {
     title = 'Captions Connection';
+    errorMessage = null;
     modalRef: BsModalRef;
     // config = {
-    //   animated: true
+    //     animated: true,
     // };
     // ###################### FORM
     dataFromServer = {};
@@ -33,11 +35,13 @@ export class LpchannelComponent {
     errorRegistered = false;
     channelForm: FormGroup;
     // channelName: string;
+    // ###################### alerts
+    // @ViewChild('wrapper01') wrapper01: ElementRef; // $('#wrapper01)
 
     constructor(
         private modalService: BsModalService,
         private fb: FormBuilder,
-        private channelService: ChannelService
+        private channelService: ChannelService // private renderer: Renderer2
     ) {
         this.creatingForm();
     }
@@ -54,13 +58,17 @@ export class LpchannelComponent {
             ],
             channelName: [
                 '',
-                [Validators.required, Validators.minLength(3)],
-                Validators.pattern('^[a-zA-Z0-9.-_$#@%&ñÑáéíóúÁÉÍÓÚ]{3,}$'),
+                [
+                    Validators.required,
+                    Validators.minLength(3),
+                    Validators.pattern('^[a-zA-Z0-9.-_$#@%&ñÑáéíóúÁÉÍÓÚ]{3,}$'),
+                ],
                 this.checkChannelExist.bind(this),
+                ,
             ],
             channelLanguage: ['', Validators.required],
             channelCategory: ['', Validators.required],
-            clientInterestingNow: [false, []],
+            clientInterestingNow: ['false', []],
         }); // this.checkChannelExist.bind(this)
     }
     // colorear los bordes del campo
@@ -110,48 +118,77 @@ export class LpchannelComponent {
                     }
                 },
                 (error) => {
+                    // HASK: LOS MENSAJES DE ERROR DEBEN SER INTERCEPTADOS POR UN HTTPINTERCEPTOR, PARA QUE
+                    // NO SE MUESTREN EN EL NAVEGADOR, ADEMÁS PUEDES CONTROLAR EL HTTP O HTTPS DEPENDIENDO DE SI ESTAS EN
+                    // PRODUCCION O DESARROLLO VER: https://medium.com/@nicowernli/angular-captura-todos-los-errores-de-httpclient-mediante-un-httpinterceptor-2cead03bb654
                     console.log(error);
-                    // HASK: tratamiento de errores desde el servidor
+                    this.errorMessage =
+                        '¡Servidor no funciona!: No hay conexión.'; // error.message
+                    // HASK: LOS MENSAJES DE ERROR DEBEN SER INTERCEPTADOS POR UN HTTPINTERCEPTOR, PARA QUE
+                    // NO SE MUESTREN EN EL NAVEGADOR, ADEMÁS PUEDES CONTROLAR EL HTTP O HTTPS DEPENDIENDO DE SI ESTAS EN
+                    // PRODUCCION O DESARROLLO VER: https://medium.com/@nicowernli/angular-captura-todos-los-errores-de-httpclient-mediante-un-httpinterceptor-2cead03bb654
                 }
             );
         });
     }
     saveData(): void {
-        // console.log(this.channelForm.value);
+        console.log(this.channelForm.value);
         this.channelService.addChannelClient(this.channelForm.value).subscribe(
             (apiData) => {
                 this.dataFromServer = apiData;
                 console.log('dataFromServer: ', this.dataFromServer);
                 // TODO: recibida la respuesta y cerrado el form, este se inhabilita y se redirecciona al inicio de la página
                 this.deleteForm();
-                this.closeModal(1);
+                this.closeModal();
                 this.registered = true; // para el alert de exito
                 this.errorRegistered = false;
+                // this.openWrapper();
             },
-            (err) => {
-                console.log(err.error);
+            (error) => {
+                // HASK: LOS MENSAJES DE ERROR DEBEN SER INTERCEPTADOS POR UN HTTPINTERCEPTOR, PARA QUE
+                // NO SE MUESTREN EN EL NAVEGADOR, ADEMÁS PUEDES CONTROLAR EL HTTP O HTTPS DEPENDIENDO DE SI ESTAS EN
+                // PRODUCCION O DESARROLLO VER: https://medium.com/@nicowernli/angular-captura-todos-los-errores-de-httpclient-mediante-un-httpinterceptor-2cead03bb654
+
+                console.log(error);
+                this.errorMessage =
+                    'Servidor no funciona!: Intentando Grabar sin conexión'; // error.message
                 this.errorRegistered = true; // para el alert de error
                 this.registered = false;
+
+                // HASK: LOS MENSAJES DE ERROR DEBEN SER INTERCEPTADOS POR UN HTTPINTERCEPTOR, PARA QUE
+                // NO SE MUESTREN EN EL NAVEGADOR, ADEMÁS PUEDES CONTROLAR EL HTTP O HTTPS DEPENDIENDO DE SI ESTAS EN
+                // PRODUCCION O DESARROLLO VER: https://medium.com/@nicowernli/angular-captura-todos-los-errores-de-httpclient-mediante-un-httpinterceptor-2cead03bb654
             }
         );
     }
     deleteForm(): void {
-        // TODO: preguntar si está seguro de querer borrar el formulario con un alert o tooltip
         this.channelForm.reset({
             channelCategory: '',
             channelLanguage: '',
         });
+        this.registered = false;
+        this.errorRegistered = false;
+        this.errorMessage = null;
     }
     // ###################### FORM
     // ###################### MODAL
     openModal(template: TemplateRef<any>): void {
-        this.modalRef = this.modalService.show(template); // .show(template, this.config);
         this.deleteForm();
+        this.modalRef = this.modalService.show(template); // .show(template, this.config);
     }
     // HASK: MIRAR TODO ESTO DE LOS MODALES EN https://valor-software.com/ngx-bootstrap/#/modals
     // HASK: XQ LO DEL modalId no me cuadraba bien
-    closeModal(modalId?: number): void {
-        this.modalService.hide(modalId);
+    closeModal(): void {
+        this.modalRef.hide();
     }
     // ###################### MODAL
+    // ###################### ALERT
+    // openWrapper() {
+    //     // this.renderer.removeClass(this.wrapper01.nativeElement, 'wrapper-close');
+    // }
+    closeWrapper() {
+        this.registered = false;
+        this.errorRegistered = false;
+        // this.renderer.addClass(this.wrapper01.nativeElement, 'wrapper-close');
+    }
 }

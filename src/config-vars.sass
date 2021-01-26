@@ -37,7 +37,7 @@ $blue-600: #005cc5 //
 
 $blue-700: #044289 //	
 
-$blue-800: #032f62 //	
+$blue-800: #032f62 //  $blue-main	
 
 $blue-900: #05264c //	
 
@@ -199,6 +199,56 @@ $gray-light: #959da5 //
 
 $gray: #6a737d //
 
+// text palete
+$txt_primary    : #0cbe689f
+$txt_secondary  : #0783c4
+$txt_grey       : #888
+$txt_alert      : #cf2c17
+
+// brand palete
 $blue-light-brand: #3FABE4
 $blue-dark-brand:  #0783C4
 $blue-primary:     #032F62
+
+
+$prefixes: "webkit", "moz", "ms", "o", "none"
+@mixin prefixInProperty( $property, $arguments)
+    @each $prefix in $prefixes
+        @if $prefix == "none"
+            #{$property}: $arguments
+        @else 
+            -#{$prefix}-#{$property}: $arguments
+
+@mixin prefixInArguments( $property, $arguments)
+    @each $prefix in $prefixes
+        @if $prefix == "none"
+            #{$property}: $arguments
+        @else 
+            #{$property}: -#{$prefix}-#{$arguments}             
+
+
+// ########## uso
+// elemento
+//     @include prefixInProperty(propiedad, valor)
+
+// ########## compilacion css
+// elemento {
+//     -webkit-propiedad: valor
+//     -moz-propiedad: valor
+//     -ms-propiedad: valor
+//     -o-propiedad: valor
+//     propiedad: valor    
+// } 
+
+// elemento
+//     @include prefixInArguments(propiedad, valor)
+
+// ########## compilacion css
+// elemento {
+//     propiedad: -webkit-valor
+//     propiedad: -moz-valor
+//     propiedad: -ms-valor
+//     propiedad: -o-valor
+//     propiedad: valor    
+// } 
+         

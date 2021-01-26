@@ -22,7 +22,11 @@
   border-bottom-right-radius: 200px
   cursor: pointer
   -webkit-transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1), background-color 1s ease
+  -moz-transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1), background-color 1s ease
+  -ms-transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1), background-color 1s ease
+  -o-transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1), background-color 1s ease
   transition: all 1s cubic-bezier(0.5, -0.75, 0.05, 1), background-color 1s ease
+  // @include prefixInProperty(propiedad, valor)
 
 .base .rrss-menu .icon 
   position: absolute
@@ -73,21 +77,22 @@
   position: absolute
   font-size: 40px
   color: #21264B
-  -webkit-transition: 0.3s cubic-bezier(0.5, -0.25, 0.05, 1)
-  transition: 0.3s cubic-bezier(0.5, -0.25, 0.05, 1)
+  // transition: 0.3s cubic-bezier(0.5, -0.25, 0.05, 1)
+  @include prefixInProperty(transition, 0.3s cubic-bezier(0.5, -0.25, 0.05, 1))
 
 .base .icons .fa-instagram 
   top: 35px
   left: 0px
-  -webkit-transition-delay: 0.2s
-  transition-delay: 0.2s
+  // transition-delay: 0.2s
+  @include prefixInProperty( transition-delay, 0.2s)
+  
 
 .base .icons .fa-facebook-f 
   top: 0px
   left: 0px
   color:#fff
-  -webkit-transition-delay: 0.1s
-  transition-delay: 0.1s
+  // -webkit-transition-delay: 0.1s
+  @include prefixInProperty( transition-delay, 0.1s)
 
 .base .icons .fa-twitter 
   top: 0px
@@ -102,9 +107,8 @@
   z-index: 9400
   width: 100px
   height: 100px
-  -moz-border-radius: 0 0 100%  0
-  -webkit-border-radius: 0 0 100% 0
-  border-radius: 0 0 100% 0
+  // border-radius: 0 0 100% 0
+  @include prefixInProperty( border-radius, 0 0 100% 0)
   position: absolute
   top: 0px
   left: 0px

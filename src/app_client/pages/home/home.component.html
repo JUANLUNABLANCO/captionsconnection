@@ -1,26 +1,273 @@
 <!-- Image https://landkit.goodthemes.co/assets/img/illustrations/illustration-2.png-->
-<div class="jumbotron jumbotron-fluid row">
-    <!-- col-12 col-md-5 col-lg-6 order-md-2  -->
-    <div class="col-lg-6">
-        <img 
-            src="assets/images/illustrations/illustration-2.png" 
-            class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0 aos-init aos-animate" 
-            alt="imagen fluida del header" 
-            data-aos="fade-up" 
-            data-aos-delay="100" />
-    </div> 
-    <div class="col-lg-5">
-        <div class="container">
-            <h1 class="display-4 fx-text fx-text-elegantshadow">Conexión <br> Con <br> Subtítulos</h1>
-            <p class="text-center text-gray-low p-3 mb-2  bg-blue-dark shadow-lg rounded degradate degradate--12" >
-                Conecta con más <br> 
-                <span class="font-weight-bolder  text-uppercase text-purple-low">público</span>, <br> 
-                poniendo <br> 
-                <span class="font-weight-bolder  text-uppercase text-green-low">subtítulos</span><br>  
-                de calidad, en tus vídeos de <br>
-                <span class="font-weight-bolder  text-uppercase text-red-middle">YOUTUBE.</span> 
+<div class="jumbotron jumbotron-fluid row debug pt-6" id="Slide0">
+    <!-- <div class="col-xl-12 saludo text-center debug">
+        <h1 class="h-big">
+            ¡Captions Connection, La App-web para <b> YouTubers</b> y
+            <b>Subtituladores!</b>
+        </h1>
+        <h4 class="h-small">Captions Connection</h4>
+    </div> -->
+    <div class="col-xl-1 col-lg-0 debug"></div>
+    <div class="col-xl-6 col-lg-7 d-flex align-items-center debug">
+        <img
+            src="assets/images/illustrations/illustration-2.png"
+            class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0 aos-init aos-animate debug"
+            alt="imagen fluida del header"
+            data-aos="fade-up"
+            data-aos-delay="100"
+        />
+    </div>
+    <div class="col-xl-4 col-lg-5 d-flex align-items-center debug">
+        <div class="container debug">
+            <h1 class="display-4 fx-text fx-text-elegantshadow debug2">
+                Conexión <br />
+                Con <br />
+                Subtítulos
+            </h1>
+            <p
+                class="text-center text-gray-low p-3 mb-2 bg-blue-dark shadow-lg rounded degradate degradate--12"
+            >
+                Conecta con más <br />
+                <span class="font-weight-bolder text-uppercase text-purple-low"
+                    >público</span
+                >, <br />
+                poniendo <br />
+                <span class="font-weight-bolder text-uppercase text-green-low"
+                    >subtítulos</span
+                ><br />
+                de calidad, en tus vídeos de <br />
+                <span class="font-weight-bolder text-uppercase text-red-middle"
+                    >YOUTUBE.</span
+                >
             </p>
-            <button type="button" class="btn btn-warning float-right" (click)="goTo('lp_channel')">Saber más...</button>
+            <button
+                type="button"
+                class="btn btn-warning float-right"
+                (click)="goTo('lp_channel')"
+            >
+                Saber más...
+            </button>
         </div>
+    </div>
+    <div class="col-xl-1 col-lg-0 debugoff"></div>
+</div>
+<!-- #################### contenido home -->
+<div class="contenedor debug2off">
+    <!-- <a
+        *ngFor="let seccion of secciones"
+        [routerLink]
+        [fragment]="seccion"
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{ exact: true }"
+    > -->
+    <!-- {{ seccion }} -->
+    <!-- </a> -->
+    <form class="debugoff slider-controls">
+        <input
+            id="slider0"
+            type="radio"
+            name="slider"
+            autofocus="autofocus"
+            checked="checked"
+            [routerLink]
+            [fragment]="'Slide0'"
+            [routerLinkActive]="'active'"
+            [routerLinkActiveOptions]="{ exact: true }"
+            titulo="Top"
+        />
+        <input
+            id="slider1"
+            type="radio"
+            name="slider"
+            [routerLink]
+            [fragment]="'Slide1'"
+            [routerLinkActive]="'active'"
+            [routerLinkActiveOptions]="{ exact: true }"
+            titulo="First"
+            (click)="addClassToSection()"
+        />
+        <input
+            id="slider2"
+            type="radio"
+            name="slider"
+            [routerLink]
+            [fragment]="'Slide2'"
+            [routerLinkActive]="'active'"
+            [routerLinkActiveOptions]="{ exact: true }"
+            titulo="Second"
+        />
+        <input
+            id="slider3"
+            type="radio"
+            name="slider"
+            [routerLink]
+            [fragment]="'Slide3'"
+            [routerLinkActive]="'active'"
+            [routerLinkActiveOptions]="{ exact: true }"
+            titulo="Features"
+        />
+        <input
+            id="slider4"
+            type="radio"
+            name="slider"
+            [routerLink]
+            [fragment]="'Slide4'"
+            [routerLinkActive]="'active'"
+            [routerLinkActiveOptions]="{ exact: true }"
+            titulo="Adding Pages"
+        />
+        <input
+            id="slider5"
+            type="radio"
+            name="slider"
+            [routerLink]
+            [fragment]="'Slide5'"
+            [routerLinkActive]="'active'"
+            [routerLinkActiveOptions]="{ exact: true }"
+            titulo="+More"
+        />
+        <input
+            id="slider6"
+            type="radio"
+            name="slider"
+            [routerLink]
+            [fragment]="'Slide6'"
+            [routerLinkActive]="'active'"
+            [routerLinkActiveOptions]="{ exact: true }"
+            titulo="About"
+        />
+        <input
+            id="slider7"
+            type="radio"
+            name="slider"
+            [routerLink]
+            [fragment]="'Slide7'"
+            [routerLinkActive]="'active'"
+            [routerLinkActiveOptions]="{ exact: true }"
+            titulo="Dummy page1"
+        />
+    </form>
+    <div class="sections debug2off">
+        <section class="Slide" for="Slide1" id="Slide1" #Slide01>
+            <div class="content">
+                <h1 class="text-center">
+                    <strong>Pure CSS</strong> one page vertical navigation
+                </h1>
+            </div>
+            <div class="icon">
+                <span
+                    ><img
+                        src="http://codecase.work/codepen/keyboard-icon.png" /></span
+                ><span>Use keyboard</span>
+            </div>
+        </section>
+        <section class="Slide" for="Slide2" id="Slide2">
+            <div class="content">
+                <h1 class="text-center">Features</h1>
+                <div class="block">
+                    <span>
+                        <i class="fa fa-hashtag"></i><br /><strong>No JS</strong
+                        ><br />CSS Rules!</span
+                    ><span>
+                        <i class="fa fa-keyboard-o"></i><br /><strong
+                            >Keyboard navigation</strong
+                        ><br />Yep, no kidding</span
+                    ><span
+                        ><i class="fa fa-bars"></i><br /><strong
+                            >Lateral menu</strong
+                        ></span
+                    ><span
+                        ><i class="fa fa-codepen"></i><br /><strong
+                            >Autogenerate pages</strong
+                        ><br />Using Jade & SASS</span
+                    >
+                </div>
+            </div>
+        </section>
+        <section class="Slide" for="Slide3" id="Slide3">
+            <div class="content">
+                <h1 class="text-center">Adding pages</h1>
+                <div class="block">
+                    <ol>
+                        <li>
+                            Add the pages title in the pageTitle array in the
+                            HTML editor to generate pages
+                        </li>
+                        <li>
+                            Add the number of pages in the $npages variable in
+                            the CSS editor
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <section class="Slide" for="Slide4" id="Slide4">
+            <div class="content">
+                <h1 class="text-center">+More</h1>
+                <div class="block">
+                    <span
+                        ><a
+                            href="https://codepen.io/hrtzt/pen/NPZKRN"
+                            target="_blank"
+                            >One Page Navigation CSS Menu</a
+                        ></span
+                    ><span
+                        ><a
+                            href="https://codepen.io/hrtzt/pen/YPoeWd"
+                            target="_blank"
+                            >The simplest CSS switch</a
+                        ></span
+                    ><span
+                        ><a
+                            href="https://codepen.io/hrtzt/pen/JdYaEZ"
+                            target="_blank"
+                            >Animated cube slider CSS only</a
+                        ></span
+                    ><span
+                        ><a
+                            href="https://codepen.io/hrtzt/pen/vGqEJO"
+                            target="_blank"
+                            >Google photos album view with only CSS</a
+                        ></span
+                    >
+                </div>
+            </div>
+        </section>
+        <section class="Slide" for="Slide5" id="Slide5">
+            <div class="content">
+                <h1 class="text-center">About</h1>
+                <div class="block">
+                    <span
+                        ><a
+                            href="https://dribbble.com/albertohartzet"
+                            target="_blank"
+                            ><i class="fa fa-dribbble"> </i>Dribbble me</a
+                        ></span
+                    ><span
+                        ><a href="https://twitter.com/hrtzt" target="_blank"
+                            ><i class="fa fa-twitter"></i>Tweet me</a
+                        ></span
+                    >
+                </div>
+            </div>
+        </section>
+        <section class="Slide" for="Slide6" id="Slide6">
+            <div class="content">
+                <h1 class="text-center">Dummy page 1</h1>
+                <div class="block">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Architecto numquam, totam iusto officia earum perferendis
+                </div>
+            </div>
+        </section>
+        <section class="Slide" for="Slide7" id="Slide7">
+            <div class="content">
+                <h1 class="text-center">Dummy page 2</h1>
+                <div class="block">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Architecto numquam, totam iusto officia earum perferendis
+                </div>
+            </div>
+        </section>
     </div>
 </div>

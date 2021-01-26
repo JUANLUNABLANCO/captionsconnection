@@ -11,12 +11,12 @@ const PAGES_ROUTES: Routes = [
         path: '',
         component: PagesComponent,
         children: [
-          {path: 'home',             component: HomeComponent },
-          {path: 'lp_channel',       component: LpchannelComponent },
-          {path: 'lp_freelancer',    component: LpfreelancerComponent },
-          {path: '', redirectTo: '/home', pathMatch: 'full' }
-        ]
-      },
+            { path: 'home', component: HomeComponent },
+            { path: 'lp_channel', component: LpchannelComponent },
+            { path: 'lp_freelancer', component: LpfreelancerComponent },
+            { path: '', redirectTo: '/home', pathMatch: 'full' },
+        ],
+    },
 ];
 
-export const PAGES_ROUTING = RouterModule.forChild( PAGES_ROUTES );
+export const PAGES_ROUTING = RouterModule.forChild(PAGES_ROUTES);
