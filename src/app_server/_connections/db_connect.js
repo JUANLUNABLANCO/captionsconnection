@@ -1,29 +1,15 @@
 const mongoose = require("mongoose");
 
-const db = require("../_configs/db");
+const db =
+    _ENV == "production"
+        ? require("../_configs/.db-env")
+        : require("../_configs/db");
 
-// WARNING: la unica manera que no se rompa la app es con un middleware a la conexion
-// mongoose
-//   .connect(...)
-//   .then(() => {
-//     connected = true;
-//   })
-//   .catch(err => {
-//     connected = false;
-//   });
-// Conectate a base de datos desde el inicio, en vez de en los modelos
-
-// app.use('*', (req, res, next) => {
-//   if (!connected) {
-//     return res.status(500).send("Couldn't stablish connection. Please, contact the admin");
-//   } else {
-//     return next();
-//   }
-// });
-// WARNING: la unica manera que no se rompa la app es con un middleware a la conexion
-
-if (_ENV === "development") {
-    // ################ CONEXION QUE FUNCIONA PARA LOCALHOST EN DEVELOPMENT cuidao el @ debe llevarlo en development, puesto que el host en production comienza por @...
+if (_ENV === "testing") {
+    var uri = "mongodb://" + db.host + ":" + db.port + "/" + db.database;
+    console.log("URI-DB: " + uri);
+} else if (_ENV === "development" || _ENV === "production") {
+    // WARNING: en production, el host comienza por @...
     var uri =
         "mongodb://" +
         db.user +
@@ -35,71 +21,28 @@ if (_ENV === "development") {
         db.port +
         "/" +
         db.database;
-    mongoose
-        .connect(uri, {
-            useUnifiedTopology: true,
-            useNewUrlParser: true,
-            useCreateIndex: true,
-            useFindAndModify: false,
-        })
-        .then(() => {
-            var _db = mongoose.connection;
-            _db.once("open", () => {
-                console.log(
-                    `connection to database, in ` +
-                        _ENV +
-                        `, established well: ` +
-                        db.port
-                );
-                console.log(
-                    "*********************************************************************"
-                );
-            });
-        })
-        .catch((error) => {
-            // console.log(error);
-            var _db = mongoose.connection;
-            _db.on("error", console.error.bind(console, "connection error:"));
-            throw new Error(
-                "Error DB: Couldn't stablish connection. Please, contact the admin"
-            );
-        });
-} else if (_ENV === "production") {
-    var uri =
-        "mongodb://" +
-        db.user +
-        ":" +
-        db.password +
-        db.host +
-        ":" +
-        db.port +
-        "/" +
-        db.database;
-    mongoose
-        .connect(uri, {
-            useUnifiedTopology: true,
-            useNewUrlParser: true,
-            useCreateIndex: true,
-            useFindAndModify: false,
-        })
-        .then(() => {
-            var _db = mongoose.connection;
-            _db.once("open", function () {
-                console.log(
-                    `connection to database, in ` +
-                        _ENV +
-                        `, established well: ` +
-                        db.port
-                );
-                console.log(
-                    "**********************************************************************"
-                );
-            });
-        })
-        .catch((error) => {
-            console.log(error);
-            var _db = mongoose.connection;
-            _db.on("error", console.error.bind(console, "connection error:"));
-        });
 }
+
+// console.log("URI-DB: " + uri);
+mongoose.connect(uri, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+});
+
+mongoose.connection
+    .on("error", (err) => console.error.bind(console, "Connection:" + err)) // enlaza el track de error a la consola (proceso actual)
+    .once("open", () => {
+        console.log(
+            `connection to database, in ` +
+                _ENV +
+                `, established well: ` +
+                db.port
+        );
+        console.log(
+            "**********************************************************************"
+        );
+    });
+
 module.exports = mongoose;

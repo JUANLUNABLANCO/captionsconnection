@@ -1,6 +1,13 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 # origin|master https://XR3DPIXEL@bitbucket.org/avr3ds_programmers/pmv.git
 
+# uikit plantillas web diseños
+/uikit
+# security keys environment estos ficheros se debn subir a mano al servidor, y nunca a los repositorios 
+*/.env
+.env
+*/.db-env.js
+*/.general-env.js
 # compiled output
 /dist
 /tmp
