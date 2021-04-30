@@ -6,11 +6,10 @@ global._ENV = process.env.NODE_ENV || "testing"; // necesario para que se cargue
 process.env.NODE_ENV = "testing";
 
 const mongoose = require("../src/app_server/_connections/db_connect");
+const Channel = require("../src/app_server/Channel/channel.model");
 
 const server = require("../src/app_server/server");
-// const mongoose = require("mongoose");
-// const createServer = require("../src/app_server/server");
-// > npm run mongodTtest
+
 const colors = {
     FgRed: "\x1b[31m",
     FgGreen: "\x1b[32m",
@@ -139,6 +138,40 @@ describe("channel routes comprobation: '/api/channel', '/api/channel/check-chann
                     done();
                 }
             });
+    });
+
+    it("The route '/api/channel/check-channel-exists' its returns false beacuse we put some data in bd, and this data its the same'", function (done) {
+        let data = { channelName: "siexisteenbd" };
+
+        let newChannel = new Channel({
+            channelName: data.channelName,
+            clientEmail: "correo@valido.es",
+            channelType: "YOUTUBE",
+            channelLanguage: "ES",
+            channelCategory: "comedy",
+        }); // son datos válidos
+
+        newChannel.save((err, channel_created) => {
+            // console.log(channel_created);
+            request(server)
+                .post("/api/channel/check-channel-exists")
+                .set("Accept", "application/json")
+                .send(data)
+                .expect("Content-Type", /json/)
+                .expect(200)
+                .end((error, response) => {
+                    if (error) {
+                        console.log(colors.FgRed, "Request " + error);
+                        console.log(colors.reset, "");
+                        done(error);
+                    } else {
+                        expect(response.body.isChannelNameAvailable).to.equal(
+                            false
+                        );
+                        done();
+                    }
+                });
+        });
     });
 
     // it("The route '/api/channel/register' its returns ", function (done) {
