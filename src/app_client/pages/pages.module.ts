@@ -20,8 +20,9 @@ import { RrssMenuElement } from '../Shared/elements/rrss-menu.element';
 
 // componets imported
 import { HomeComponent } from './home/home.component';
-import { LpchannelComponent } from './lpchannel/lpchannel.component';
-import { LpfreelancerComponent } from './lpfreelancer/lpfreelancer.component';
+import { YoutuberComponent } from './youtuber/youtuber.component';
+import { FreelancerComponent } from './freelancer/freelancer.component';
+import { LpYoutuberComponent } from './landings/channel/lp_youtuber.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 // NGX BOOTSTRAP
@@ -39,8 +40,9 @@ import { AlertModule } from 'ngx-bootstrap/alert';
         MainComponent,
         FooterComponent,
         HomeComponent,
-        LpchannelComponent,
-        LpfreelancerComponent,
+        YoutuberComponent,
+        FreelancerComponent,
+        LpYoutuberComponent,
         PagenotfoundComponent,
 
         // elements
@@ -68,9 +70,9 @@ import { AlertModule } from 'ngx-bootstrap/alert';
         MainComponent,
         FooterComponent,
         HomeComponent,
-        LpchannelComponent,
-        LpfreelancerComponent,
-
+        YoutuberComponent,
+        FreelancerComponent,
+        LpYoutuberComponent,
         // elements
         RrssMenuElement,
     ],

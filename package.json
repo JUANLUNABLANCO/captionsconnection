@@ -16,7 +16,13 @@
         "nodeProd": "SET NODE_ENV=production && pm2 start ./src/server.js",
         "mongodTest": "mongod  --port 27017 --dbpath D:/_XZONE_/___DEVELOPMENT___/_mongodata/DBS/DB_caption_connection_test",
         "mongodDev": "mongod --port 30030 --dbpath D:/_XZONE_/___DEVELOPMENT___/_mongodata/DBS/DB_caption_connection --auth",
-        "mongodProd": "mongod --port 60060 --dbpath D:/_XZONE_/___DEVELOPMENT___/_mongodata/DBS/DB_caption_connection --auth"
+        "mongodProd": "mongod --port 60060 --dbpath D:/_XZONE_/___DEVELOPMENT___/_mongodata/DBS/DB_caption_connection --auth",
+        "dockerBuildImage": "docker build -t Image_CC:v01 .",
+        "dockerRunContainer": "docker run  -p 5001:5000 --name C01_myapp_dev Image_CC:v01",
+        "dockerRmAll": "docker rm $(docker stop $(docker ps -aq))",
+        "dockerComposeBuild": "docker-compose build",
+        "dockerComposeUp": "docker compose up",
+        "dockerComposeDown": "docker-compose down"
     },
     "private": true,
     "dependencies": {

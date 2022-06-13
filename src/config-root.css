@@ -1,0 +1,97 @@
+/* root for lp-youtuber component  */
+:root {
+    /* branding colors */
+    --blue-main: #032f62;
+    --blue-bg-i-top: #122c4f;
+    --blue-bg-i-down: #1f395b;
+    --blue-dark: #0366d6;
+    --blue-middle: #0d95c4;
+    --blue-light: #3faaf3;
+    /* icons-buttons-rrss colors */
+    --orange-button: #ff6347;
+    --pink-rrss: #ff1493;
+    --pink-alpha-rrss: #d0bcf6;
+    --violet-rrss: #663399;
+    /* background colors */
+    --black-bg: #0f0f0f;
+    --grey-dark-bg: #3a3a3a;
+    --grey-light-bg: #888888;
+    --auberginius-bg: #2b2b38;
+    --bg-blue-violet: #3b3399;
+    --bg-graphics: var(--blue-light);
+    --bg-slogan: #0d85c4;
+    --bg-graphics-aux: rgba(29, 30, 34, 0.3);
+    --bg-modal-wrapper: rgba(255, 255, 255, 0.5);
+    --red-pannel-error: rgba(229, 79, 84, 0.5);
+    /* primary text colors */
+    --text-color: #140707;
+    --grey-text: #717171;
+    --cream-text: #eeeeee;
+    --white-text: #ffffff;
+    /* effect text colors */
+    --yellow-icon: #e8b20f;
+    --grey-icon: var(--grey-dark-bg);
+    --grey-alpha-icon: rgba(113, 113, 113, 0.35);
+    --fx-text-green: #85e89d;
+    --fx-text-red: #e54a54;
+    --fx-text-violet: #b392f0;
+    --fx-text-yellow: #ffd33d;
+    --red-trash: #ff041e;
+
+    --first-color: var(--blue-main);
+    --second-color: var(--cream-text);
+    --third-color: var(--pink-rrss);
+    --btn-primary-color: var(--blue-dark);
+    --btn-second-color: var(--cream-text);
+    --btn-warning-color: var(--orange-button);
+    /* shadows, corners */
+    --shadow-button: 0.5rem 0.5rem 1.25rem rgba(0, 0, 0, 0.4);
+    --shadow-button-hover: 0.8rem 0.8rem 1.5rem rgba(15, 15, 15, 0.4);
+    --shadow-title: 1rem 1rem 1.75rem rgba(0, 0, 0, 0.8);
+    --shadow-box-inset: 1rem 1rem 1.75rem rgba(0, 0, 0, 0.8) inset;
+    --border-title: 3px solid white;
+    --border-radius-small: 4px;
+    --border-radius-medium: 12px;
+    --border-radius-bigger: 3rem;
+    --corner-large: 2.5rem;
+    --corner-normal: 0.5rem;
+    --corner-small: 0.25rem;
+    /* tipografías */
+    --font-normal: "Rubik", sans-serif;
+    --font-subtitle: "Montserrat", sans-serif;
+    --font-title: "Montserrat", sans-serif;
+    --font-icon: "fontawesome free";
+    /* widths and heights, and positions */
+    --min-width: 320px;
+    --max-width: 1280px;
+    --z-over-top: 999;
+    --z-top: 99;
+    --z-middle: 9;
+    --z-normal: 0;
+    --z-down: -99;
+    --height-menu: 3rem;
+    --height-lg-menu: 4rem;
+    /* carousel */
+    --numSlides: 6;
+    --widthScreen-lg: 1275px;
+    --widthSlides-lg: calc(
+        var(--widthScreen-lg) * var(--numSlides)
+    ); /* 1275px * 6 */
+    --widthScreen-md: 760px;
+    --widthSlides-md: calc(
+        var(--widthScreen-md) * var(--numSlides)
+    ); /* 768px * 6 */
+    --widthScreen-xs: 320px;
+    --widthSlides-xs: calc(
+        var(--widthScreen-xs) * var(--numSlides)
+    ); /* 320px * 6 */
+    --height-lg-subtitles: 48vh;
+    --height-mdp-subtitles: 23vh;
+    --height-mdl-subtitles: 52vh;
+    --height-xs-subtitles: 25vh;
+    /* progress-bar */
+    --progressbar-value: 50%;
+    --pb-color-2018: #5747d1;
+    --pb-color-2019: #8453df;
+    --pb-color-2020: #e24aed;
+}

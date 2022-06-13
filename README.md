@@ -33,3 +33,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## "ngx-bootstrap": "^6.2.0",
 
 ## cambios en la rama prueba de git
+
+## errores en git bash
+
+    1. ng command not found
+    npm install -g @angular/cli@latest

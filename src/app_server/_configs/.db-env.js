@@ -4,14 +4,14 @@
 // pero la estartegia debemos indicársela
 
 const configDB = {
-    production: {
+    productionLocalBD: {
         user: "cc_app",
         password: "JMLB_1234_ppcs_2709",
         host: "localhost",
         port: 60060, //puerto que requiere --auth
         database: "DB_caption_connection",
     },
-    productionRemote: {
+    production: {
         // mlab
         // ¡¡¡¡¡¡¡ cambiar esto en mlab !!!!!!!!!! usuario, db, etc y el package.json mongodProd
         user: "cc_api", // este es el usuario-cliente de la db (app, robomongo, consola), quien se esta conectando

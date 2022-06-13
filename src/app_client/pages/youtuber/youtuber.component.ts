@@ -11,18 +11,18 @@ import { Component, TemplateRef } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 // ##### servicios propios
-import { ChannelService } from '../../services/Channel.service';
+import { ChannelService } from '../../services/channel.service';
 
 interface ErrorValidator {
     [s: string]: boolean;
 }
 
 @Component({
-    selector: 'app-lpchannel',
-    templateUrl: './lpchannel.component.html',
-    styleUrls: ['./lpchannel.component.sass'],
+    selector: 'app-youtuber',
+    templateUrl: './youtuber.component.html',
+    styleUrls: ['./youtuber.component.sass'],
 })
-export class LpchannelComponent {
+export class YoutuberComponent {
     title = 'Captions Connection';
     errorMessage = null;
     modalRef: BsModalRef;
