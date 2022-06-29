@@ -2,9 +2,9 @@
 
 var configGENERAL = {
     production: {
-        PORT: 6666,
-        URLBASE: "http://localhost:6666/api",
-        INCOMMING_URL_HTTPACCESS_PERMITED: "http://localhost:4000", // cors peticiones aceptadas desde angular
+        PORT: 3333,
+        URLBASE: "http://localhost:3333/api",
+        INCOMMING_URL_HTTPACCESS_PERMITED: "http://localhost:4200", // cors peticiones aceptadas desde angular
         CONSOLE: {
             ACTIVE: false,
             ROUTE: false,

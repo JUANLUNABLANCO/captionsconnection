@@ -1,0 +1,43 @@
+# version del compose file
+version: "3.8"
+
+# servicios app y db
+services:
+    ng:
+        image: cc_frontend
+        depends_on:
+            - app
+        ports:
+            - "127.0.0.1:4200:4200"
+
+        volumes:
+            - .:/var/www/captions-connections.com
+            - /var/www/captions-connections.com/node_modules
+
+        command: npx nodemon --legacy-watch ngProd.js
+
+    app:
+        image: cc_backend
+        environment:
+            NODE_ENV: "production"
+            MONGO_URL: "mongodb://db:27017/DB_caption_connection"
+        depends_on:
+            - db
+        # revisar el puerto
+        ports:
+            - "127.0.0.1:3333:3333"
+
+        # añadimos un volumen para el directorio .
+        volumes:
+            - .:/var/www/captions-connections.com
+            - /var/www/captions-connections.com/node_modules
+
+        # podemos añadir este comando que sustituirá al por defecto que era: node index.js
+        # con ello no necesitamos hacer un: > docker-compose down && > docker-compose up -d
+        command: npx nodemon --legacy-watch src/index.js
+
+    db:
+        image: mongo:4.2
+
+        volumes:
+            - ./dbdata:/data/db

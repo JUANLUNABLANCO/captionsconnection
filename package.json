@@ -4,7 +4,8 @@
     "scripts": {
         "ng": "ng",
         "ngStart": "ng serve",
-        "ngBuild": "ng build",
+        "ngBuild": "ng build --prod",
+        "ngProd": "nodemon ./ngProd.js",
         "ngTest": "ng test",
         "ngLint": "ng lint",
         "ngE2e": "ng e2e",
@@ -17,12 +18,11 @@
         "mongodTest": "mongod  --port 27017 --dbpath D:/_XZONE_/___DEVELOPMENT___/_mongodata/DBS/DB_caption_connection_test",
         "mongodDev": "mongod --port 30030 --dbpath D:/_XZONE_/___DEVELOPMENT___/_mongodata/DBS/DB_caption_connection --auth",
         "mongodProd": "mongod --port 60060 --dbpath D:/_XZONE_/___DEVELOPMENT___/_mongodata/DBS/DB_caption_connection --auth",
-        "dockerBuildImage": "docker build -t Image_CC:v01 .",
-        "dockerRunContainer": "docker run  -p 5001:5000 --name C01_myapp_dev Image_CC:v01",
-        "dockerRmAll": "docker rm $(docker stop $(docker ps -aq))",
-        "dockerComposeBuild": "docker-compose build",
-        "dockerComposeUp": "docker compose up",
-        "dockerComposeDown": "docker-compose down"
+        "dIFrontend": "docker build -t cc_frontend -f Dockerfile.frontend .",
+        "dIBackend": "docker build -t cc_backend -f Dockerfile.backend .",
+        "dCUp": "docker-compose up",
+        "dCDown": "docker-compose down",
+        "dockerRmAll": "docker rm $(docker ps -aq)"
     },
     "private": true,
     "dependencies": {

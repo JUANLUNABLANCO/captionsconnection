@@ -38,3 +38,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
     1. ng command not found
     npm install -g @angular/cli@latest
+
+## DOCKER
+
+1º hemos creado el Dockerfile
+2º hacemos un build de ese dockerfile
+
+> docker build -t ccapp .
+

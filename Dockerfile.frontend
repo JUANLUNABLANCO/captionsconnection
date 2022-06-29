@@ -1,0 +1,24 @@
+# desde la imagen de node:16.14.2
+FROM node:16.14.2
+
+# ############## app nodejs
+# copiamos solo los ficheros necesarios para ejecutar npm install
+COPY ["package.json", "package-lock.json", "/var/www/captions-connection.com/"]
+
+# asume el directorio de trabajo como /usr/src donde se copio la app
+WORKDIR /var/www/captions-connection.com
+
+# hace el npm install dentro de /usr/src, para extarer las dependencias de node
+RUN npm install
+
+# copiamos todos los ficheros que tenemos en . en el destino /usr/src del contenedor, excepto package.json y package-lock.json
+COPY [".", "/var/www/captions-connection.com/"]
+
+# expondrá el contenedor y el comando principal en el puerto 3000
+EXPOSE 4200
+
+# SET NODE_ENV=production && pm2 start ./src/server.js
+CMD ["npx", "nodemon", "ngProd.js"]
+
+
+

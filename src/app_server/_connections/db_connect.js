@@ -8,7 +8,7 @@ const db =
 if (_ENV === "testing") {
     var uri = "mongodb://" + db.host + ":" + db.port + "/" + db.database;
     console.log("URI-DB: " + uri);
-} else if (_ENV === "development" || _ENV === "production") {
+} else if (_ENV === "development") {
     // WARNING: en production, el host comienza por @...
     var uri =
         "mongodb://" +
@@ -21,6 +21,21 @@ if (_ENV === "testing") {
         db.port +
         "/" +
         db.database;
+} else if (_ENV === "production") {
+    // #### MONGO_URL llega desde docker-compose.yml el otro es para productionHere sin docker o productionRemote en mlab
+    var uri =
+        process.env.MONGO_URL ||
+        "mongodb://" +
+            db.user +
+            ":" +
+            db.password +
+            // "@" + en mlab ya viene el host como "@xxxx.mlab.com"
+            db.host +
+            ":" +
+            db.port +
+            "/" +
+            db.database;
+    console.log("URI-DB: " + uri);
 }
 
 // console.log("URI-DB: " + uri);
